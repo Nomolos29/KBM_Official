@@ -222,7 +222,7 @@ export default function Home() {
 
         <div className="flex flex-wrap max-w-[1440px] gap-x-5 gap-y-10 w-full px-10 justify-evenly items-center">
           {team.map((person, index) => (
-            <span className="flex flex-col items-center w-fit gap-y-4">
+            <span key={index} className="flex flex-col items-center w-fit gap-y-4">
               <FaUserSecret className="text-[200px] rounded-full bg-white shadow-md shadow-[#000] pt-10 text-black/60" />
               
               <div className="flex flex-col text-center">
