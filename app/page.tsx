@@ -17,6 +17,7 @@ import features4 from "@/public/feaures4.svg"
 import { FAQs } from "@/lib/faqData"
 import Link from "next/link";
 import FaqAccordion from "@/components/global/faqAccordion";
+import { FaUserSecret } from "react-icons/fa6";
 
 
 export default function Home() {
@@ -42,6 +43,7 @@ export default function Home() {
       heading: "Innovative Curriculum",
       description: "Integrating blockchain education into primary and secondary school systems."
     },
+    
   ]
 
   const partner = [partner1, partner2, partner3, partner4];
@@ -77,11 +79,69 @@ export default function Home() {
     }
   ]
 
+  const team = [
+    {
+      image: "",
+      name: "Ayomide Arowolo-Ayodeji",
+      role: "Project Manager"
+    },
+    {
+      image: "",
+      name: "Osazee Oghagbon",
+      role: "Project Manager"
+    },
+    {
+      image: "",
+      name: "Ernest Efe Osazuwa",
+      role: "Project Manager"
+    },
+    {
+      image: "",
+      name: "Oshioriamen G. Agbomekhe",
+      role: "Project Manager"
+    },
+    {
+      image: "",
+      name: "Amarachi Ogbu",
+      role: "Project Manager"
+    },
+    {
+      image: "",
+      name: "Mariam Salami",
+      role: "Project Manager"
+    },
+    {
+      image: "",
+      name: "Precious Adegbite",
+      role: "Project Manager"
+    },
+    {
+      image: "",
+      name: "Carl Aaron Lewis",
+      role: "Project Manager"
+    },
+    {
+      image: "",
+      name: "Solomon Sunday",
+      role: "Project Manager"
+    },
+    {
+      image: "",
+      name: "Bello Iteoluwakisi",
+      role: "Project Manager"
+    },
+    {
+      image: "",
+      name: "Happiness Idowu",
+      role: "Project Manager"
+    }
+  ]
+
   return (
     <div className="w-full flex flex-col py-10 items-center">
-      <section className="flex max-w-[1440px] pb-20 w-full items-center gap-y-10 gap-x-16 px-20">
-        <Image src={heroImage} alt="" width={0} height={0} className="w-[50%]" />
-        <div className="flex flex-col gap-y-7 pr-5">
+      <section className="flex max-w-[1440px] pb-20 w-full items-center gap-y-10 gap-x-20 px-10">
+        <Image src={heroImage} alt="" width={0} height={0} className="max-w-[55%]" />
+        <div className="flex flex-col w-[650px] gap-y-7 pr-5">
           <h1 className="text-6xl text-black font-semibold leading-tight">Launch your career in
           Software engineering</h1>
           <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span>
@@ -90,16 +150,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center items-center w-full bg-slate-50 py-20">
-        <div className="max-w-[1440px] w-full flex flex-col items-center gap-y-8 px-10">
-          <h1 className="text-5xl font-semibold">Our Solution</h1>
-          <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span>
-          <p className="text-center w-3/4 text-xl">We aim to build an educational hub where Blockchain education for young adults and children with special needs can have access to top-notch information and education about the Blockchain Ecosystem. What are our core strengths and values</p>
+      <section className="flex justify-center items-center w-full bg-yellow-100 py-20">
+        <div className="max-w-[1440px] w-full flex flex-col items-center gap-y-10 px-10">
+          <section className="w-[800px] flex flex-col items-center gap-y-8">
+            <h1 className="text-5xl font-semibold">Our Solution</h1>
+            <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span>
+            <p className="text-center w-3/4 text-xl">We aim to build an educational hub where Blockchain education for young adults and children with special needs can have access to top-notch information and education about the Blockchain Ecosystem. What are our core strengths and values</p>
+          </section>
           <section className="flex w-full items-center gap-x-7 pt-5">
             {ourSolution.map((solution, index) => (
-              <span key={index} className="bg-[#FFB100] h-[280px] flex flex-col gap-y-3 p-4 items-center rounded-2xl">
+              <span key={index} className="bg-white h-[250px] flex shadow-[#FFB100] shadow flex-col gap-y-3 px-7 p-4 items-center rounded-2xl">
                 <Image src={solution.iconURL} alt="icons" width={50} height={50} className="pt-3" />
-                <h4 className="text-[20px] font-bold mt-3 text-center">{solution.heading}</h4>
+                <h4 className="text-[22px] font-extrabold mt-3 text-center text-yellow-100" style={{WebkitTextStroke: '1px black'}}>{solution.heading}</h4>
                 <p className="text-center font-medium">{solution.description}</p>
               </span>
             ))}
@@ -107,16 +169,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-y-14 justify-center py-20 items-center w-full bg-white">
-        <div className="max-w-[1440px] w-full flex flex-col items-center gap-y-8 px-10">
-          <h1 className="text-5xl font-semibold">Our Esteemed Partners</h1>
-          <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span>
-        </div>
+      <section className="flex gap-y-14 justify-center py-20 items-center w-full bg-white">
+        <div className="max-w-[1440px] w-full flex items-center justify-between gap-y-8 px-10">
+          <div className="w-1/2 flex flex-col gap-y-8 px-10">
+            <h1 className="text-6xl leading-relaxed font-semibold">Our Esteemed Partners</h1>
+            <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span>
+          </div>
 
-        <div className="flex gap-x-5 items-center justify-center">
-          {partner.map((image, index) => (
-            <Image key={index} src={image} alt="partner image" width={150} height={100} />
-          ))}
+          <div className="flex gap-x-5 items-center justify-center">
+            {partner.map((image, index) => (
+              <Image key={index} src={image} alt="partner image" width={120} height={100} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -128,15 +192,17 @@ export default function Home() {
         </div>
 
         <div className="max-w-[1440px] w-full justify-between items-center flex px-10">
-          <main className="shadow-2xl w-full bg-white flex items-center justify-between rounded-2xl overflow-hidden">
+          <main className="w-full bg-white flex items-center justify-between rounded-2xl overflow-hidden">
             <section className="w-[60%] flex justify-between items-center h-full relate">
               <span className="w-[5px] h-[200px] bg-[#ffd062]"></span>
-              <div className="flex flex-wrap justify-between gap-y-5 w-full mr-[-100px] bg-white px-10 z-10 rounded-tr-xl rounded-br-xl">
+              <div className="flex flex-wrap gap-5 justify-end py-10 w-full mr-[-100px] bg-white px-10 z-10 rounded-tr-xl rounded-br-xl">
                 {features.map((feature, index) => (
-                  <span key={index} className="py-5 px-4 w-[300px] flex flex-col gap-y-2">
-                    <Image src={feature.icon} alt={`${feature.heading} Image`} width={30} height={30} />
-                    <h3 className="font-semibold pt-3">{feature.heading}</h3>
-                    <p>{feature.description}</p>
+                  <span key={index} className="py-5 px-6 w-[300px] shadow-md shadow-[#FFB100] justify-between flex flex-col gap-y-2 border rounded-lg">
+                    <div className="flex flex-col gap-y-2 w-full">
+                      <Image src={feature.icon} alt={`${feature.heading} Image`} width={30} height={30} />
+                      <h3 className="font-semibold pt-3">{feature.heading}</h3>
+                      <p>{feature.description}</p>
+                    </div>
                     <Link href={feature.link} className="underline text-[#FFB100] cursor-pointer">{feature.cta}</Link>
                   </span>
                 ))}
@@ -147,11 +213,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center py-20 items-center w-full bg-white">
+      <section className="flex justify-center flex-col py-20 gap-y-5 items-center w-full bg-white">
         <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10">
           <h1 className="text-5xl font-semibold">Visionaries Behind the Initiative</h1>
           <span className="h-[3px] w-20 bg-[#FFB100] rounded-full my-5"></span>  
           <p className="text-lg text-center">Meet Our Team</p>
+        </div>
+
+        <div className="flex flex-wrap max-w-[1440px] gap-x-5 gap-y-10 w-full px-10 justify-evenly items-center">
+          {team.map((person, index) => (
+            <span className="flex flex-col items-center w-fit gap-y-4">
+              <FaUserSecret className="text-[200px] rounded-full bg-white shadow-md shadow-[#000] pt-10 text-black/60" />
+              
+              <div className="flex flex-col text-center">
+                <h1 className="text-2xl text-black font-bold">{person.name}</h1>
+                <p className="text-[#FFB100] text-md">{person.role}</p>
+              </div>
+            </span>
+          ))}
         </div>
       </section>
 
@@ -162,7 +241,7 @@ export default function Home() {
           <p className="text-lg text-center">Your Questions Answered</p>
         </div>
 
-        <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10">
+        <div className="max-w-[1440px] w-full flex flex-col items-center px-10">
           <FaqAccordion faqs={FAQs} />
         </div>
       </section>
