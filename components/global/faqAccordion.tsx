@@ -40,7 +40,7 @@ const FaqAccordion: React.FC<FaqAccordionProps> = ({ faqs = [] }) => {
         faqs.map((faq, index) => (
           <div
             key={index}
-            className={`border rounded-md p-2 w-full ${activeIndex === index ? "border-[#FFB100] bg-yellow-100" : "hover:border-[#FFB100] hover:bg-yellow-100"}`}
+            className={`border rounded-md p-2 w-full ${activeIndex === index ? "border-[#FFB100] bg-yellow-100" : "hover:border-[#FFB100]"}`}
             ref={(el) => {
               if (el) accordionRef.current[index] = el;
             }}

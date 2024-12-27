@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="w-full bg-white drop-shadow flex justify-center items-center">
+    <header className="w-full bg-white flex justify-center items-center">
       <main className="max-w-[1440px] w-full margin-auto pt-2 flex justify-between items-center px-10">
         {/* Company Logo */}
         <Image src={logo} alt="Company Logo" width={100} height={50} />
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
             <Link
               key={index}
               href={menu.navURL}
-              className={`text-xl py-5 px-2 border-b-4 ${
+              className={`text-[18px] py-5 px-2 ${
                 pathname === menu.navURL
                   ? "border-[#FFB100] text-[#FFB100]" // Active link styles
                   : "border-transparent text-black hover:border-[#FFB100] hover:text-[#FFB100] cursor-pointer" // Non-active hover styles

@@ -139,13 +139,13 @@ export default function Home() {
 
   return (
     <div className="w-full flex flex-col py-10 items-center">
-      <section className="flex max-w-[1440px] pb-20 w-full items-center gap-y-10 gap-x-20 px-10">
-        <Image src={heroImage} alt="" width={0} height={0} className="max-w-[55%]" />
-        <div className="flex flex-col w-[650px] gap-y-7 pr-5">
+      <section className="flex max-w-[1440px] pb-20 w-full justify-center items-center gap-y-10 gap-x-20 px-10">
+        {/* <Image src={heroImage} alt="" width={0} height={0} className="max-w-[55%]" /> */}
+        <div className="flex flex-col w-[70%] gap-y-7 pr-5 items-center text-center">
           <h1 className="text-6xl text-black font-semibold leading-tight">Launch your career in
-          Software engineering</h1>
+          Blockchain Technology</h1>
           <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span>
-          <p className="text-xl">KBM is an Educational Consult passionate about educating and training young adults and children with Special Needs about the Blockchain ecosystem.  We are taking steps to integrate the blockchain educational curriculum into the formal education system to foster early adaptation and involvement in the blockchain ecosystem, thereby creating unique career paths that eventually mature into experts.</p>
+          <p className="text-[18px]">KBM is an Educational Consult passionate about educating and training young adults and children with Special Needs about the Blockchain ecosystem.  We are taking steps to integrate the blockchain educational curriculum into the formal education system to foster early adaptation and involvement in the blockchain ecosystem, thereby creating unique career paths that eventually mature into experts.</p>
           <span className="py-4 px-8 bg-[#FFB100] w-[200px] text-center text-2xl font-medium cursor-pointer rounded-lg">Get started</span>
         </div>
       </section>
@@ -155,23 +155,23 @@ export default function Home() {
           <section className="w-[800px] flex flex-col items-center gap-y-8">
             <h1 className="text-5xl font-semibold">Our Solution</h1>
             <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span>
-            <p className="text-center w-3/4 text-xl">We aim to build an educational hub where Blockchain education for young adults and children with special needs can have access to top-notch information and education about the Blockchain Ecosystem. What are our core strengths and values</p>
+            <p className="text-center w-3/4 text-[18px]">We aim to build an educational hub where Blockchain education for young adults and children with special needs can have access to top-notch information and education about the Blockchain Ecosystem. What are our core strengths and values</p>
           </section>
           <section className="flex w-full items-center gap-x-7 pt-5">
             {ourSolution.map((solution, index) => (
-              <span key={index} className="bg-white h-[250px] flex shadow-[#FFB100] shadow flex-col gap-y-3 px-7 p-4 items-center rounded-2xl">
+              <div key={index} className="bg-white h-[250px] flex shadow-[#FFB100] shadow flex-col gap-y-3 px-7 p-4 items-center rounded-2xl">
                 <Image src={solution.iconURL} alt="icons" width={50} height={50} className="pt-3" />
-                <h4 className="text-[22px] font-extrabold mt-3 text-center text-yellow-100" style={{WebkitTextStroke: '1px black'}}>{solution.heading}</h4>
+                <h4 className="text-[22px] font-extrabold mt-3 text-center text-yellow-600">{solution.heading}</h4>
                 <p className="text-center font-medium">{solution.description}</p>
-              </span>
+              </div>
             ))}
           </section>
         </div>
       </section>
 
       <section className="flex gap-y-14 justify-center py-20 items-center w-full bg-white">
-        <div className="max-w-[1440px] w-full flex items-center justify-between gap-y-8 px-10">
-          <div className="w-1/2 flex flex-col gap-y-8 px-10">
+        <div className="max-w-[1440px] w-full flex flex-col justify-center gap-y-8 px-10">
+          <div className="w-1/2 flex flex-col items-center gap-y-8 px-10">
             <h1 className="text-6xl leading-relaxed font-semibold">Our Esteemed Partners</h1>
             <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span>
           </div>
@@ -197,7 +197,7 @@ export default function Home() {
               <span className="w-[5px] h-[200px] bg-[#ffd062]"></span>
               <div className="flex flex-wrap gap-5 justify-end py-10 w-full mr-[-100px] bg-white px-10 z-10 rounded-tr-xl rounded-br-xl">
                 {features.map((feature, index) => (
-                  <span key={index} className="py-5 px-6 w-[300px] shadow-md shadow-[#FFB100] justify-between flex flex-col gap-y-2 border rounded-lg">
+                  <span key={index} className="py-5 px-6 w-[300px] shadow-sm shadow-[#ffd981e8] justify-between flex flex-col gap-y-2 border rounded-lg">
                     <div className="flex flex-col gap-y-2 w-full">
                       <Image src={feature.icon} alt={`${feature.heading} Image`} width={30} height={30} />
                       <h3 className="font-semibold pt-3">{feature.heading}</h3>
