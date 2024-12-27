@@ -170,8 +170,8 @@ export default function Home() {
       </section>
 
       <section className="flex gap-y-14 justify-center py-20 items-center w-full bg-white">
-        <div className="max-w-[1440px] w-full flex flex-col justify-center gap-y-8 px-10">
-          <div className="w-1/2 flex flex-col items-center gap-y-8 px-10">
+        <div className="max-w-[1440px] w-full flex flex-col justify-center gap-y-16 px-10">
+          <div className="w-full flex flex-col items-center gap-y-3 px-10">
             <h1 className="text-6xl leading-relaxed font-semibold">Our Esteemed Partners</h1>
             <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span>
           </div>
