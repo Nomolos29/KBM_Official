@@ -62,10 +62,10 @@ const Footer = () => {
 
             <div className='flex gap-x-10'>
               {navMenu.map((Category, index) => (
-                <div>
+                <div key={index}>
                   <h4>{Category.name}</h4>
                   {Category.menu.map((nav, index) => (
-                    <div>
+                    <div key={index}>
                       <Link href={nav.url}>{nav.name}</Link>
                     </div>
                   ))}

@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import heroImage from "@/public/image.svg"
 import icon1 from "@/public/lightening.svg"
 import icon2 from "@/public/stars.svg"
 import icon3 from "@/public/lock.svg"
@@ -177,7 +176,9 @@ export default function Home() {
           {/* <span className="py-4 px-8 bg-[#FFB100] w-[200px] text-center text-2xl font-medium cursor-pointer rounded-lg">Get started</span> */}
         </div>
         <section className="w-full flex absolute shadow-md h-[100px] bg-white bottom-0">
-
+          {partner.map((image, index) => (
+            <Image key={index} src={image} alt="partners logo" width={0} height={0} className="w-[50px]" />
+          ))}
         </section>
       </section>
 
