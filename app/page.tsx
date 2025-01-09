@@ -85,16 +85,19 @@ export default function Home() {
 
   const firstSection = [
     {
+      link: "/about_us",
       color: "bg-[#E2752533]",
       title: "About KBM",
       content: "KBM is an elite training platform dedicated to equipping individuals with world class software engineering and leadership skills... "
     },
     {
+      link: "",
       color: "bg-[#FFF3A070]",
       title: "What We Do",
       content: "At KBM, we deliver intensive training programmes designed to transform aspiring tech enthusiasts into industry-ready software engineers. Our courses, ranging from 1 to 6 months, are tailored to..."
     },
     {
+      link: "",
       color: "bg-[#79797926]",
       title: "Why choose KBM?",
       content: "Comprehensive Training: Develop in-demand skills in software engineering and blockchain technology. Real-World Projects: Gain..."
@@ -189,7 +192,7 @@ export default function Home() {
               <h4 className="font-semibold text-xl">{card.title}</h4>
               <p className="text-md text-[#636363]">{card.content}</p> 
             </span>
-            <BsFillArrowRightCircleFill className="text-3xl bg-[#e9e9e9] border border-[#f5f5f5] rounded-full text-[#ffffff98] cursor-pointer" />
+            <Link href={card.link}><BsFillArrowRightCircleFill className="text-3xl bg-[#e9e9e9] border border-[#f5f5f5] rounded-full text-[#ffffff98] cursor-pointer" /></Link>
           </div>
         ))}
       </section>
@@ -198,14 +201,14 @@ export default function Home() {
       <section className="flex justify-center items-center w-full bg-[#FAFAFA] py-20">
         <div className="max-w-[1440px] w-full flex flex-col items-center gap-y-10 px-10">
           <section className="w-[800px] flex flex-col items-center gap-y-8">
-            <h1 className="text-5xl font-semibold">Our <span className="text-[#F8B51C]">Solution</span></h1>
+            <h1 className="text-5xl font-semibold">Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Solution</span></h1>
             {/* <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span> */}
             <p className="text-center w-full text-[18px]">We aim to build an educational hub where Blockchain education for young adults and children with special needs can have access to top-notch information and education about the Blockchain Ecosystem. What are our core strengths and values</p>
           </section>
-          <section className="flex w-full items-center gap-x-7 pt-5">
-            <span className="h-[60px] bg-[#ffd575cb] rounded-full w-full absolute max-w-[1250px] blur-3xl"></span>
+          <section className="flex w-full items-center gap-x-7 pt-5 relative">
+            <span className="h-[70px] bg-[#ffd268] rounded-full w-full absolute max-w-[1250px] blur-[100px] bottom-10"></span>
             {ourSolution.map((solution, index) => (
-              <div key={index} className="bg-[#E2E2E24D] border-white border h-[250px] flex flex-col gap-y-3 px-7 p-4 rounded-2xl">
+              <div key={index} className="bg-[#E2E2E24D] border-white border h-[250px] z-10 flex flex-col gap-y-3 px-7 p-4 rounded-2xl">
                 <Image src={solution.iconURL} alt="icons" width={50} height={50} className="pt-3" />
                 <h4 className="text-[20px] font-semibold mt-3 text-yellow-600">{solution.heading}</h4>
                 <p className="">{solution.description}</p>
@@ -216,9 +219,9 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col justify-center py-20 items-center w-full bg-white">
-        <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10">
-          <h1 className="text-5xl font-semibold">Explore Our Dynamic Features</h1>
-          <span className="h-[3px] w-20 bg-[#FFB100] rounded-full my-5"></span>  
+        <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10 gap-y-5">
+          <h1 className="text-5xl font-semibold">Explore Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Dynamic Features</span></h1>
+          {/* <span className="h-[3px] w-20 bg-[#FFB100] rounded-full my-5"></span>   */}
           <p className="text-lg text-center">Learn and Engage</p>
         </div>
 
@@ -238,11 +241,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center flex-col py-20 gap-y-5 items-center w-full bg-white">
-        <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10">
-          <h1 className="text-5xl font-semibold">Visionaries Behind the Initiative</h1>
-          <span className="h-[3px] w-20 bg-[#FFB100] rounded-full my-5"></span>  
-          <p className="text-lg text-center">Meet Our Team</p>
+      <section className="flex justify-center flex-col pb-20 gap-y-5 items-center w-full bg-white">
+        <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10 gap-y-5">
+          <h1 className="text-5xl font-semibold">Meet  <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Our Team</span></h1>
+          <p className="text-lg text-center">Visionaries Behind the Initiative</p>
         </div>
 
         <div className="flex flex-wrap max-w-[1440px] gap-x-5 gap-y-10 w-full px-10 justify-evenly items-center">
@@ -262,10 +264,10 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col justify-center py-20 items-center w-full bg-white">
-        <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10">
-          <h1 className="text-5xl font-semibold">Frequently Asked Questions</h1>
-          <span className="h-[3px] w-20 bg-[#FFB100] rounded-full my-5"></span>  
-          <p className="text-lg text-center">Your Questions Answered</p>
+        <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10 gap-y-5">
+          <h1 className="text-5xl font-semibold">Your Questions <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Answered</span></h1>
+          
+          <p className="text-lg text-center">Frequently Asked Questions</p>
         </div>
 
         <div className="max-w-[1440px] w-full flex flex-col items-center px-10">

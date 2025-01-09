@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import logo from "@/public/company_logo_light.svg";
+import footerBg from "@/public/footer_bg.svg";
 import Link from 'next/link';
 
 const Footer = () => {
@@ -10,11 +11,11 @@ const Footer = () => {
       menu: [
         {
           name: "Home",
-          url: ""
+          url: "/"
         },
         {
           name: "About us ",
-          url: ""
+          url: "/about_us"
         }
       ]
     },
@@ -22,15 +23,15 @@ const Footer = () => {
       name: "Community",
       menu: [
         {
-          name: "Home",
+          name: "Devlopers",
           url: ""
         },
         {
-          name: "Home",
+          name: "How it works",
           url: ""
         },
         {
-          name: "Home",
+          name: "FAQs",
           url: ""
         }
       ]
@@ -39,41 +40,43 @@ const Footer = () => {
       name: "Company",
       menu: [
         {
-          name: "Home",
+          name: "Privacy policy",
           url: ""
         },
         {
-          name: "Home",
+          name: "Term of Use",
           url: ""
         },
         {
-          name: "Home",
-          url: ""
+          name: "Contact",
+          url: "/contact_us"
         }
       ]
     }
   ]
 
   return (
-    <footer className='w-full bg-black flex justify-center h-[150px] items-center'>
-        <main className='max-w-[1440px] w-full margin-auto pt-2 px-10 flex justify-between items-center text-white'>
-          <section className='flex justify-between items-center'>
+    <footer className='w-full bg-black flex justify-center h-[250px] pl-10 items-center overflow-hidden'>
+        <main className='max-w-[1440px] w-full margin-auto pt-2 flex justify-between items-center text-white'>
+          <section className='flex justify-between items-center gap-x-20'>
             <Image src={logo} alt='KBM Logo' width={0} height={0} className='' />
 
-            <div className='flex gap-x-10'>
+            <div className='flex gap-x-20'>
               {navMenu.map((Category, index) => (
                 <div key={index}>
-                  <h4>{Category.name}</h4>
-                  {Category.menu.map((nav, index) => (
-                    <div key={index}>
-                      <Link href={nav.url}>{nav.name}</Link>
-                    </div>
-                  ))}
+                  <h4 className='font-semibold text-lg pb-2'>{Category.name}</h4>
+                  <div className='flex flex-col gap-y-3'>
+                    {Category.menu.map((nav, index) => (
+                      <Link key={index} href={nav.url} className='text-sm cursor-pointer'>{nav.name}</Link>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
           </section>
-          <section></section>
+          <section>
+            <Image src={footerBg} alt="Footer Background Image" width={0} height={0} className='w-full' />
+          </section>
         </main>
     </footer>
   )

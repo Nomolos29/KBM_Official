@@ -13,8 +13,8 @@ const Header: React.FC = () => {
   const navMenu = [
     { name: "Home", navURL: "/" },
     { name: "About Us", navURL: "/about_us" },
-    { name: "Our Mission", navURL: "#" },
-    { name: "Contact Us", navURL: "#" },
+    // { name: "Our Mission", navURL: "#" },
+    { name: "Contact Us", navURL: "/contact_us" },
   ];
 
   return (
@@ -24,7 +24,7 @@ const Header: React.FC = () => {
         <Image src={logo} alt="Company Logo" width={0} height={0} />
 
         {/* Navigation Menu */}
-        <nav className="flex w-[36%] justify-between items-center">
+        <nav className="flex w-[36%] justify-center gap-x-5 items-center">
           {navMenu.map((menu, index) => (
             <Link
               key={index}
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
         {/* Join Us Button */}
         <Link
           href="/join_us" // Redirect to the relevant page
-          className="px-8 py-2 bg-[#FFB100] text-black text-lg font-semibold rounded-lg hover:bg-[#e69c00]"
+          className="px-8 py-2 bg-gradient-to-r from-[#F8B51C] to-[#FEE539] text-black text-lg font-semibold rounded-lg hover:bg-[#e69c00]"
         >
           Join Us
         </Link>
