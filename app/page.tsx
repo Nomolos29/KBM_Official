@@ -175,9 +175,9 @@ export default function Home() {
           <p className="text-[18px]">Empowering the next generation of developers through cutting-edge training, hands-on experience, and practical exposure to real-life projects</p>
           {/* <span className="py-4 px-8 bg-[#FFB100] w-[200px] text-center text-2xl font-medium cursor-pointer rounded-lg">Get started</span> */}
         </div>
-        <section className="w-full flex absolute shadow-md h-[100px] bg-white bottom-0">
+        <section className="w-full flex absolute shadow-md h-[100px] bg-white bottom-0 py-2 justify-center gap-x-5">
           {partner.map((image, index) => (
-            <Image key={index} src={image} alt="partners logo" width={0} height={0} className="w-[50px]" />
+            <Image key={index} src={image} alt="partners logo" width={0} height={0} className="w-[100px]" />
           ))}
         </section>
       </section>
