@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import logo from "@/public/company_logo.svg";
+import logo from "@/public/kbm_cutted_logo.svg";
 import { usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
@@ -19,9 +19,9 @@ const Header: React.FC = () => {
 
   return (
     <header className="w-full bg-white flex justify-center items-center">
-      <main className="max-w-[1440px] w-full margin-auto pt-2 flex justify-between items-center px-10">
+      <main className="max-w-[1440px] w-full margin-auto flex justify-between h-[80px] items-center px-10">
         {/* Company Logo */}
-        <Image src={logo} alt="Company Logo" width={100} height={50} />
+        <Image src={logo} alt="Company Logo" width={0} height={0} />
 
         {/* Navigation Menu */}
         <nav className="flex w-[36%] justify-between items-center">
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
             <Link
               key={index}
               href={menu.navURL}
-              className={`text-[18px] py-5 px-2 ${
+              className={`text-[18px] px-2 ${
                 pathname === menu.navURL
                   ? "border-[#FFB100] text-[#FFB100]" // Active link styles
                   : "border-transparent text-black hover:border-[#FFB100] hover:text-[#FFB100] cursor-pointer" // Non-active hover styles
