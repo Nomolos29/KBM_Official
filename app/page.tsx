@@ -163,29 +163,34 @@ export default function Home() {
   ]
 
   return (
-    <div className="w-full flex flex-col py-10 items-center">
-      <section className="flex max-w-[1440px] pb-20 h-[530px] w-full justify-center items-center gap-y-10 gap-x-20 px-10 relative">
-        <div className="absolute pt-5">
-          <span className="flex justify-center items-center h-[528px] w-[528px] rounded-full border border-[#F8B51C] bg-[#F0E2B33B]">
+    <div className="w-full flex flex-col items-center">
+      <section className="flex max-w-[1440px] py-20 mb-20 md:mb-0 h-[350px] md:h-[530px] w-full justify-center items-center gap-y-10 gap-x-20 px-3 md:px-10 relative">
+        <div className="absolute pt-5 -z-10">
+          <span className="hidden md:flex justify-center items-center h-[528px] w-[528px] rounded-full border border-[#F8B51C] bg-[#F0E2B33B]">
             <span className="h-[282px] w-[282px] rounded-full border border-[#F8B51C] bg-[#F8B51C0D]"></span>
+          </span>
+
+          <span className="flex justify-center md:hidden items-center h-[328px] w-[328px] rounded-full border border-[#F8B51C] bg-[#F0E2B33B]">
+            <span className="h-[182px] blur-3xl w-[182px] rounded-full border border-[#F8B51C] bg-[#ffffffc7]"></span>
           </span>
         </div>
         
-        <div className="flex flex-col w-[55%] gap-y-5 pr-5 items-center text-center z-10">
-          <h1 className="text-6xl text-black font-bold leading-tight">Launch your career in
+        <div className="flex flex-col gap-y-5 items-center text-center">
+          <h1 className="text-3xl md:text-6xl w-full text-black font-bold leading-tight">Launch your career in<br />
           Blockchain Technology</h1>
           
-          <p className="text-[18px]">Empowering the next generation of developers through cutting-edge training, hands-on experience, and practical exposure to real-life projects</p>
+          <p className="text-[18px] w-full md:w-[90%] lg:w-[75%] xl:w-[55%]">Empowering the next generation of developers through cutting-edge training, hands-on experience, and practical exposure to real-life projects</p>
           {/* <span className="py-4 px-8 bg-[#FFB100] w-[200px] text-center text-2xl font-medium cursor-pointer rounded-lg">Get started</span> */}
         </div>
-        <section className="w-full flex absolute shadow-md h-[100px] bg-white bottom-0 py-2 justify-center gap-x-5">
+
+        <section className="w-full flex absolute shadow-md h-[100px] bg-white bottom-[-80px] md:bottom-[-20px] py-2 justify-center items-center gap-x-5 md:gap-x-10">
           {partner.map((image, index) => (
-            <Image key={index} src={image} alt="partners logo" width={0} height={0} className="w-[100px]" />
+            <Image key={index} src={image} alt="partners logo" width={0} height={0} className="w-[60px] h-fit md:w-[80px]" />
           ))}
         </section>
       </section>
 
-      <section className="py-20 flex justify-center items-center gap-x-10 max-w-[1440px] w-full px-[60px]">
+      <section className="py-10 md:py-20 flex flex-col md:flex-row justify-center items-center gap-10 max-w-[1440px] w-full px-5 md:px-[60px]">
         {firstSection.map((card, index) => (
           <div key={index} className={`flex p-6 flex-col items-center h-fit ${card.color} rounded-2xl text-center gap-y-10 w-[300px]`}>
             <span className="flex flex-col gap-y-5">
@@ -198,15 +203,16 @@ export default function Home() {
       </section>
 
 
-      <section className="flex justify-center items-center w-full bg-[#FAFAFA] py-20">
-        <div className="max-w-[1440px] w-full flex flex-col items-center gap-y-10 px-10">
-          <section className="w-[800px] flex flex-col items-center gap-y-8">
-            <h1 className="text-5xl font-semibold">Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Solution</span></h1>
+      <section className="flex justify-center items-center w-full bg-[#FAFAFA] py-10 md:py-20">
+        <div className="max-w-[1440px] w-full flex flex-col items-center gap-y-10 px-5 md:px-10">
+          <section className="w-full md:w-[800px] text-center flex flex-col items-center gap-y-4 md:gap-y-8">
+            <h1 className="text-3xl md:text-5xl font-semibold">Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Solution</span></h1>
             {/* <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span> */}
-            <p className="text-center w-full text-[18px]">We aim to build an educational hub where Blockchain education for young adults and children with special needs can have access to top-notch information and education about the Blockchain Ecosystem. What are our core strengths and values</p>
+            <p className="text-center w-full text-md md:text-[18px]">We aim to build an educational hub where Blockchain education for young adults and children with special needs can have access to top-notch information and education about the Blockchain Ecosystem. What are our core strengths and values</p>
           </section>
-          <section className="flex w-full items-center gap-x-7 pt-5 relative">
-            <span className="h-[70px] bg-[#ffd268] rounded-full w-full absolute max-w-[1250px] blur-[100px] bottom-10"></span>
+          <section className="flex flex-col md:flex-row w-full items-center gap-7 pt-5 relative">
+            <span className="h-[200px] md:h-[70px] bg-[#ffd268] rounded-full w-full absolute max-w-[1250px] blur-[100px] bottom-[60%] md:bottom-10"></span>
+            <span className="h-[200px] md:hidden md:h-[70px] bg-[#ffd268] rounded-full w-full absolute max-w-[1250px] blur-[100px] bottom-[14%] md:bottom-10"></span>
             {ourSolution.map((solution, index) => (
               <div key={index} className="bg-[#E2E2E24D] border-white border h-[250px] z-10 flex flex-col gap-y-3 px-7 p-4 rounded-2xl">
                 <Image src={solution.iconURL} alt="icons" width={50} height={50} className="pt-3" />
@@ -218,17 +224,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col justify-center py-20 items-center w-full bg-white">
+      <section className="flex flex-col justify-center py-10 md:py-20 items-center w-full bg-white">
         <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10 gap-y-5">
-          <h1 className="text-5xl font-semibold">Explore Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Dynamic Features</span></h1>
+          <h1 className="text-3xl md:text-5xl text-center font-semibold">Explore Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Dynamic Features</span></h1>
           {/* <span className="h-[3px] w-20 bg-[#FFB100] rounded-full my-5"></span>   */}
           <p className="text-lg text-center">Learn and Engage</p>
         </div>
 
-        <div className="max-w-[1440px] w-full justify-between items-center flex px-10">
-          <div className="flex flex-wrap gap-5 justify-center py-10 w-full px-10 rounded-tr-xl rounded-br-xl">
+        <div className="max-w-[1440px] w-full justify-between items-center flex px-0 md:px-10">
+          <div className="flex flex-wrap gap-5 justify-center md:py-10 w-full px-5 md:px-10 rounded-tr-xl rounded-br-xl">
             {features.map((feature, index) => (
-              <span key={index} className={`py-7 px-10 w-[48%] ${feature.color} shadow-md shadow-[#ffd981e8] justify-between flex flex-col gap-y-2 rounded-lg`}>
+              <span key={index} className={`py-7 px-5 md:px-10 w-full md:w-[48%] ${feature.color} md:shadow-md md:shadow-[#ffd981e8] justify-between flex flex-col gap-y-2 rounded-lg`}>
                 <div className="flex flex-col gap-y-4 w-full">
                   <Image src={feature.icon} alt={`${feature.heading} Image`} width={50} height={50} />
                   <h3 className="font-semibold pt-3 text-xl">{feature.heading}</h3>
@@ -241,36 +247,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center flex-col pb-20 gap-y-5 items-center w-full bg-white">
-        <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10 gap-y-5">
-          <h1 className="text-5xl font-semibold">Meet  <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Our Team</span></h1>
+      <section className="flex justify-center flex-col py-10 md:py-20 gap-y-5 items-center w-full bg-[#FAFAFA]">
+        <div className="max-w-[1440px] w-full text-center flex flex-col items-center px-10 gap-y-5">
+          <h1 className="text-3xl md:text-5xl font-semibold">Meet  <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Our Team</span></h1>
           <p className="text-lg text-center">Visionaries Behind the Initiative</p>
         </div>
 
-        <div className="flex flex-wrap max-w-[1440px] gap-x-5 gap-y-10 w-full px-10 justify-evenly items-center">
-            <div className="flex gap-x-20 w-full overflow-x-scroll px-10">
+        <div className="flex flex-wrap max-w-[1440px] gap-x-5 w-full px-5 md:px-10 justify-evenly items-center">
+            <div className="flex w-full gap-x-5 overflow-x-scroll p-10">
               {team.map((person, index) => (
-                <span key={index} className="flex flex-col items-center w-fit gap-y-4">
-                  <FaUserSecret className="text-[200px] rounded-full bg-white shadow-md shadow-[#000] pt-10 text-black/60" />
+                <div key={index} className="flex flex-col items-left w-fit gap-y-4 hover:bg-gradient-to-r from-[#ffe8b68c] to-[#E2E2E24D] hover:border-white border-[#FAFAFA] border hover:backdrop-blur-lg hover:shadow-md hover:scale-110 duration-300 shadow-[#e2e2e2] p-5">
+                  <FaUserSecret className="text-[200px] bg-white pt-10 text-black/60" />
                   
-                  <div className="flex flex-col text-center w-fit flex-nowrap">
-                    <h1 className="text-2xl text-black font-bold">{person.name}</h1>
-                    <p className="text-[#FFB100] text-md">{person.role}</p>
+                  <div className="flex flex-col text-left w-fit flex-nowrap">
+                    <h1 className="text-md text-black font-bold line-clamp-1 hover:line-clamp-none">{person.name}</h1>
+                    <p className="text-[#adadad] font-medium text-sm">{person.role}</p>
                   </div>
-                </span>
+                </div>
               ))}
             </div>
         </div>
       </section>
 
-      <section className="flex flex-col justify-center py-20 items-center w-full bg-white">
-        <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10 gap-y-5">
-          <h1 className="text-5xl font-semibold">Your Questions <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Answered</span></h1>
+      <section className="flex flex-col justify-center py-10 md:py-20 items-center w-full bg-white">
+        <div className="max-w-[1440px] text-center w-full flex flex-col items-center pb-10 px-10 gap-y-5">
+          <h1 className="text-3xl md:text-5xl font-semibold">Your Questions <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Answered</span></h1>
           
           <p className="text-lg text-center">Frequently Asked Questions</p>
         </div>
 
-        <div className="max-w-[1440px] w-full flex flex-col items-center px-10">
+        <div className="max-w-[1440px] w-full flex flex-col items-center px-5 md:px-10">
           <FaqAccordion faqs={FAQs} />
         </div>
       </section>
