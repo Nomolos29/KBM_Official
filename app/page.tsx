@@ -16,11 +16,47 @@ import features4 from "@/public/feaures4.svg"
 import { FAQs } from "@/lib/faqData"
 import Link from "next/link";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { useState, useEffect, useRef } from "react";
+import { FaChevronLeft, FaChevronRight, FaUserSecret } from "react-icons/fa";
 import FaqAccordion from "@/components/global/faqAccordion";
-import { FaUserSecret } from "react-icons/fa6";
 
 
 export default function Home() {
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const visibleCards = 5;
+
+  const nextCard = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % team.length);
+  };
+
+  const prevCard = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? team.length - 1 : prevIndex - 1
+    );
+  };
+
+  useEffect(() => {
+    if (!isPaused) {
+      const interval = setInterval(() => {
+        nextCard();
+      }, 3000); // Adjust scroll interval (in milliseconds)
+      return () => clearInterval(interval);
+    }
+  }, [isPaused, activeIndex]);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      const cardWidth = scrollRef.current.offsetWidth / visibleCards;
+      scrollRef.current.scrollTo({
+        left: cardWidth * activeIndex,
+        behavior: "smooth",
+      });
+    }
+  }, [activeIndex]);
 
   const ourSolution = [
     {
@@ -205,7 +241,7 @@ export default function Home() {
 
       <section className="flex justify-center items-center w-full bg-[#FAFAFA] py-10 md:py-20">
         <div className="max-w-[1440px] w-full flex flex-col items-center gap-y-10 px-5 md:px-10">
-          <section className="w-full md:w-[800px] text-center flex flex-col items-center gap-y-4 md:gap-y-8">
+          <section className="w-full md:w-[600px] lg:w-[800px] text-center flex flex-col items-center gap-y-4 md:gap-y-8">
             <h1 className="text-3xl md:text-5xl font-semibold">Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Solution</span></h1>
             {/* <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span> */}
             <p className="text-center w-full text-md md:text-[18px]">We aim to build an educational hub where Blockchain education for young adults and children with special needs can have access to top-notch information and education about the Blockchain Ecosystem. What are our core strengths and values</p>
@@ -214,7 +250,7 @@ export default function Home() {
             <span className="h-[200px] md:h-[70px] bg-[#ffd268] rounded-full w-full absolute max-w-[1250px] blur-[100px] bottom-[60%] md:bottom-10"></span>
             <span className="h-[200px] md:hidden md:h-[70px] bg-[#ffd268] rounded-full w-full absolute max-w-[1250px] blur-[100px] bottom-[14%] md:bottom-10"></span>
             {ourSolution.map((solution, index) => (
-              <div key={index} className="bg-[#E2E2E24D] border-white border h-[250px] z-10 flex flex-col gap-y-3 px-7 p-4 rounded-2xl">
+              <div key={index} className="bg-[#E2E2E24D] border-white border h-[250px] md:h-[400px] lg:h-[250px] z-10 flex flex-col gap-y-3 px-7 p-4 rounded-2xl">
                 <Image src={solution.iconURL} alt="icons" width={50} height={50} className="pt-3" />
                 <h4 className="text-[20px] font-semibold mt-3 text-yellow-600">{solution.heading}</h4>
                 <p className="">{solution.description}</p>
@@ -253,20 +289,61 @@ export default function Home() {
           <p className="text-lg text-center">Visionaries Behind the Initiative</p>
         </div>
 
-        <div className="flex flex-wrap max-w-[1440px] gap-x-5 w-full px-5 md:px-10 justify-evenly items-center">
-            <div className="flex w-full gap-x-5 overflow-x-scroll p-10">
-              {team.map((person, index) => (
-                <div key={index} className="flex flex-col items-left w-fit gap-y-4 hover:bg-gradient-to-r from-[#ffe8b68c] to-[#E2E2E24D] hover:border-white border-[#FAFAFA] border hover:backdrop-blur-lg hover:shadow-md hover:scale-110 duration-300 shadow-[#e2e2e2] p-5">
-                  <FaUserSecret className="text-[200px] bg-white pt-10 text-black/60" />
-                  
-                  <div className="flex flex-col text-left w-fit flex-nowrap">
-                    <h1 className="text-md text-black font-bold line-clamp-1 hover:line-clamp-none">{person.name}</h1>
-                    <p className="text-[#adadad] font-medium text-sm">{person.role}</p>
-                  </div>
+        <div className="relative max-w-[1440px] w-full px-5 md:px-10 py-10">
+          {/* Navigation Arrows */}
+          <span
+            className="absolute left-0 top-[40%] transform -translate-y-1/2 z-20 bg-black/20 mx-1 md:mx-4 text-white rounded-full p-3"
+            onClick={prevCard}
+          >
+            <FaChevronLeft />
+          </span>
+          <span
+            className="absolute right-0 top-[40%] transform -translate-y-1/2 z-20 bg-black/20 mx-1 md:mx-4 text-white rounded-full p-3"
+            onClick={nextCard}
+          >
+            <FaChevronRight />
+          </span>
+
+          <div
+            ref={scrollRef}
+            className="flex overflow-hidden gap-x-5"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {team.map((person, index) => (
+              <div
+                key={index}
+                className={`flex flex-col w-1/2 md:w-1/3 xl:w-1/5 gap-y-5 p-5 transition-transform duration-300 ${
+                  activeIndex === index
+                    ? "scale-110 bg-gradient-to-r w-auto items-center text-center from-[#ffe8b68c] to-[#E2E2E24D] absolute top-10 right-[calc(100%/5-12px)] md:right-[34%] xl:right-[calc(40%)] z-10 border-white border shadow-md backdrop-blur-lg"
+                    : "opacity-50 items-left"
+                }`}
+                onClick={() => setActiveIndex(index)}
+              >
+                <FaUserSecret className="text-[200px] bg-white pt-10 text-black/60" />
+                <div className="flex flex-col">
+                  <h1 className="text-md text-black font-bold line-clamp-1">
+                    {person.name}
+                  </h1>
+                  <p className="text-[#adadad] font-medium text-sm">{person.role}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center items-center mt-10 gap-x-2">
+            {team.map((_, index) => (
+              <span
+                key={index}
+                className={`rounded-full ${
+                  activeIndex === index ? "bg-[#F8B51C] w-2.5 h-2.5" : "bg-gray-400 w-1.5 h-1.5"
+                }`}
+              ></span>
+            ))}
+          </div>
         </div>
+
       </section>
 
       <section className="flex flex-col justify-center py-10 md:py-20 items-center w-full bg-white">
