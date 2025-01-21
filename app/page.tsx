@@ -18,7 +18,7 @@ import Link from "next/link";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { useState, useEffect, useRef } from "react";
 import { FaChevronLeft, FaChevronRight, FaUserSecret } from "react-icons/fa";
-import FaqAccordion from "@/components/global/faqAccordion";
+import { FaqAccordion } from "@/components";
 
 
 export default function Home() {
@@ -292,13 +292,13 @@ export default function Home() {
         <div className="relative max-w-[1440px] w-full px-5 md:px-10 py-10">
           {/* Navigation Arrows */}
           <span
-            className="absolute left-0 top-[40%] transform -translate-y-1/2 z-20 bg-black/20 mx-1 md:mx-4 text-white rounded-full p-3"
+            className="absolute left-0 top-[40%] transform -translate-y-1/2 z-20 bg-black/20 mx-1 md:mx-4 text-white rounded-full p-3 cursor-pointer"
             onClick={prevCard}
           >
             <FaChevronLeft />
           </span>
           <span
-            className="absolute right-0 top-[40%] transform -translate-y-1/2 z-20 bg-black/20 mx-1 md:mx-4 text-white rounded-full p-3"
+            className="absolute right-0 top-[40%] transform -translate-y-1/2 z-20 bg-black/20 mx-1 md:mx-4 text-white rounded-full p-3 cursor-pointer"
             onClick={nextCard}
           >
             <FaChevronRight />

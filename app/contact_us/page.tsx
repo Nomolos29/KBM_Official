@@ -1,4 +1,6 @@
 import { TfiLocationPin } from "react-icons/tfi";
+import { CiLinkedin, CiFacebook, CiInstagram } from "react-icons/ci";
+import { RiTwitterXFill } from "react-icons/ri";
 // import * as Yup from "yup";
 // import { useFormik } from "formik";
 import React from 'react';
@@ -45,21 +47,49 @@ const ContactUs = () => {
     }
   ]
 
+  const socialLinks = [
+    {
+      link: "",
+      icon: <CiInstagram />
+    },
+    {
+      link: "",
+      icon: <CiLinkedin />
+    },
+    {
+      link: "",
+      icon: <CiFacebook />
+    },
+    {
+      link: "",
+      icon: <RiTwitterXFill />
+    }
+  ]
+
   const inputStyling = "w-full px-4 rounded-[5px] border py-2 h-[60px] outline-0 focus:border-[#6495ED] bg-transparent";
 
   return (
     <div className="w-full flex flex-col items-center overflow-hidden">
       <main className="flex flex-col md:flex-row max-w-[1440px] gap-y-20 md:gap-0 pb-20 pt-10 md:py-20 w-full justify-between px-3 md:px-10">
-        <section className="flex flex-col items-center md:items-start gap-y-20 w-full md:2/5">
+        <section className="flex flex-col items-center md:items-start gap-y-16 w-full md:w-2/5">
           <h1 className="font-semibold text-5xl leading-none">Contact Us</h1>
+          
           <div className="flex flex-col w-full items-center md:items-start gap-16">
             {contactInfo.map((contact, index) => (
-              <div key={index} className="flex text-center md:text-left justify-center md:gap-3 w-[70%] md:w-[65%] lg:w-[50%]">
+              <div key={index} className="flex text-center md:text-left justify-center md:gap-3 w-[70%] md:w-[65%] lg:w-[40%]">
                 <span className="text-2xl">{contact.icon}</span>
                 <div className="flex flex-col gap-y-2">
                   <h4 className="font-medium text-xl">{contact.title}</h4>
                   <p className="text-sm text-[#777777]">{contact.description}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex gap-x-5 pl-5">
+            {socialLinks.map((social, index) => (
+              <div key={index} className="text-2xl w-10 h-10 bg-[#FBDEB5] flex justify-center items-center rounded-full font-medium">
+                {social.icon}
               </div>
             ))}
           </div>

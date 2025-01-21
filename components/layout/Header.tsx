@@ -25,7 +25,9 @@ const Header: React.FC = () => {
     <header className="w-full bg-[#ffffffe5] flex justify-center items-center z-50 sticky top-0">
       <main className="max-w-[1440px] w-full margin-auto flex justify-between h-[80px] items-center px-5 md:px-10 overflow-x-hidden sticky top-0">
         {/* Company Logo */}
-        <Image src={logo} alt="Company Logo" width={0} height={0} />
+        <Link href="/" >
+          <Image src={logo} alt="Company Logo" width={0} height={0} />
+        </Link>
 
         {/* Navigation Menu */}
         <nav className="hidden md:flex justify-center gap-x-5 items-center">
