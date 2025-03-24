@@ -3,6 +3,7 @@
 import Image from "next/image"
 import about from "@/public/aboutUs.svg"
 import WhatWeDo from "@/public/WhatWeDo.svg"
+import { HeroHeader, PastEngagement } from "@/components"
 
 const AboutUs = () => {
 
@@ -15,6 +16,9 @@ const AboutUs = () => {
 
   return (
     <div className="w-full flex flex-col items-center">
+      <HeroHeader plainText="About" decoratedText="KBM" description="KBM is an elite training platform dedicated to equipping aspiring and professional developers with world-class skills in emerging technologies and leadership." />
+
+
       <main className="flex flex-col max-w-[1440px] gap-y-20 md:gap-0 pb-20 pt-10 md:py-20 w-full justify-between px-3 md:px-10 lg:px-20 overflow-hidden">
         <section className="flex justify-between flex-col-reverse px-4 md:px-0 md:flex-row gap-y-7 items-center w-full relative md:pt-5 lg:pt-12">
           <div className="md:w-[40%] lg:w-[35%] flex flex-col gap-y-4 md:gap-y-7">
@@ -47,7 +51,7 @@ const AboutUs = () => {
           <span className="bg-[#FEE53933] w-[700px] h-[300px] lg:h-[400px] xl:h-[500px] -rotate-[30deg] absolute md:-right-[55%] lg:-right-[45%] -top-0 lg:-top-10 xl:-right-[25%] xl:-top-2"></span>
         </section>
 
-        <section className="md:pt-32 flex flex-col items-center w-full md:gap-y-10">
+        {/* <section className="md:pt-32 flex flex-col items-center w-full md:gap-y-10">
           <h1 className="text-2xl md:text-4xl xl:text-5xl font-semibold border-[#F0E2B3] border-b-[3px] xl:w-[34%] pb-1 md:pb-3">Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Photo Gallery</span></h1>
 
           <div className="flex w-full gap-4 pt-10 md:py-10">
@@ -63,8 +67,11 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+
       </main>
+
+        <PastEngagement />
     </div>
   )
 }

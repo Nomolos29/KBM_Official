@@ -76,7 +76,7 @@ const ContactUs = () => {
           
           <div className="flex flex-col w-full items-center md:items-start gap-16">
             {contactInfo.map((contact, index) => (
-              <div key={index} className="flex text-center md:text-left justify-center md:gap-3 w-[70%] md:w-[65%] lg:w-[40%]">
+              <div key={index} className="flex text-center md:text-left justify-center md:gap-3 w-[75%]">
                 <span className="text-2xl">{contact.icon}</span>
                 <div className="flex flex-col gap-y-2">
                   <h4 className="font-medium text-xl">{contact.title}</h4>
@@ -95,84 +95,86 @@ const ContactUs = () => {
           </div>
         </section>
 
-        <section className="w-full md:w-3/5 flex flex-col gap-y-7 relative px-2 xl:pl-28">
-          <h1 className="font-semibold text-4xl">Get in touch</h1>
+        <section className="w-full flex flex-col px-2 items-end">
+            <div className="w-full flex md:w-3/5 flex-col gap-y-7 relative">
+              <h1 className="font-semibold text-4xl">Get in touch</h1>
 
-          <div className="w-full flex flex-col gap-y-20 blur-[80px] absolute max-w-[1250px] bottom-0 right-[-70px] z-0">
-            <span className="h-[80px] bg-[#b4ff4363] rounded-full z-10 rotate-12"></span>
-            <span className="h-[70px] bg-[#C6042E42] rounded-full z-10 rotate-12"></span>
-            <span className="h-[500px] w-[200px] bg-[#ffe96a5e] rounded-[200%] z-0 absolute left-0"></span>
-            <span className="h-[70px] bg-[#C6042E42] rounded-full z-10 rotate-12"></span>
-            <span className="h-[80px] bg-[#80c913b0] rounded-full z-10 rotate-12"></span>
-          </div>
+              <div className="w-full flex flex-col gap-y-20 blur-[80px] absolute max-w-[1250px] bottom-0 right-[-70px] z-0">
+                <span className="h-[80px] bg-[#b4ff4363] rounded-full z-10 rotate-12"></span>
+                <span className="h-[70px] bg-[#C6042E42] rounded-full z-10 rotate-12"></span>
+                <span className="h-[500px] w-[200px] bg-[#ffe96a5e] rounded-[200%] z-0 absolute left-0"></span>
+                <span className="h-[70px] bg-[#C6042E42] rounded-full z-10 rotate-12"></span>
+                <span className="h-[80px] bg-[#80c913b0] rounded-full z-10 rotate-12"></span>
+              </div>
 
-          <form className="w-full md:w-[380px] lg:w-[480px] xl:w-[540px] p-8 bg-white rounded-lg flex flex-col gap-y-5 z-10">
-            <span className="w-full flex flex-col gap-2">
-              <label htmlFor="userName" className="font-medium text-lg">Enter you name</label>
-              <input 
-                className={`${inputStyling} `}
-                type="text" 
-                name="userName"
-                id="userName"
-                // value={}
-                placeholder="Name"
-                // onChange={
-                // onBlur={
-                required
-              />
-              <p className="text-red-400">{}</p>
-            </span>
+              <form className="w-full md:w-[380px] lg:w-[480px] xl:w-[540px] p-8 bg-white rounded-lg flex flex-col gap-y-5 z-10">
+                <span className="w-full flex flex-col gap-2">
+                  <label htmlFor="userName" className="font-medium text-lg">Enter you name</label>
+                  <input 
+                    className={`${inputStyling} `}
+                    type="text" 
+                    name="userName"
+                    id="userName"
+                    // value={}
+                    placeholder="Name"
+                    // onChange={
+                    // onBlur={
+                    required
+                  />
+                  <p className="text-red-400">{}</p>
+                </span>
 
-            <span className="w-full flex flex-col gap-2">
-              <label htmlFor="userName" className="font-medium text-lg"> Enter you email</label>
-              <input 
-                className={`${inputStyling} `}
-                type="text" 
-                name="userName"
-                id="userName"
-                // value={}
-                placeholder="Email"
-                // onChange={}
-                // onBlur={}
-                required
-              />
-              <p className="text-red-400">{}</p>
-            </span>
+                <span className="w-full flex flex-col gap-2">
+                  <label htmlFor="userName" className="font-medium text-lg"> Enter you email</label>
+                  <input 
+                    className={`${inputStyling} `}
+                    type="text" 
+                    name="userName"
+                    id="userName"
+                    // value={}
+                    placeholder="Email"
+                    // onChange={}
+                    // onBlur={}
+                    required
+                  />
+                  <p className="text-red-400">{}</p>
+                </span>
 
-            <span className="w-full flex flex-col gap-2">
-              <label htmlFor="userName" className="font-medium text-lg">Enter your phone number</label>
-              <input 
-                className={`${inputStyling} `}
-                type="text" 
-                name="userName"
-                id="userName"
-                // value={}
-                placeholder="Phone number"
-                // onChange={}
-                // onBlur={}
-                required
-              />
-              <p className="text-red-400">{}</p>
-            </span>
+                <span className="w-full flex flex-col gap-2">
+                  <label htmlFor="userName" className="font-medium text-lg">Enter your phone number</label>
+                  <input 
+                    className={`${inputStyling} `}
+                    type="text" 
+                    name="userName"
+                    id="userName"
+                    // value={}
+                    placeholder="Phone number"
+                    // onChange={}
+                    // onBlur={}
+                    required
+                  />
+                  <p className="text-red-400">{}</p>
+                </span>
 
-            <span className="w-full flex flex-col gap-2">
-              <label htmlFor="userName" className="font-medium text-lg">Enter your message</label>
-              <textarea 
-                className={`${inputStyling} `}
-                // type="text" 
-                name="userName"
-                id="userName"
-                // value={}
-                placeholder="Your message"
-                // onChange={}
-                // onBlur={}
-                required
-              />
-              <p className="text-red-400">{}</p>
-            </span>
+                <span className="w-full flex flex-col gap-2">
+                  <label htmlFor="userName" className="font-medium text-lg">Enter your message</label>
+                  <textarea 
+                    className={`${inputStyling} `}
+                    // type="text" 
+                    name="userName"
+                    id="userName"
+                    // value={}
+                    placeholder="Your message"
+                    // onChange={}
+                    // onBlur={}
+                    required
+                  />
+                  <p className="text-red-400">{}</p>
+                </span>
 
-            <button type="submit" className="px-4 md:px-8 py-2 bg-gradient-to-r from-[#F8B51C] to-[#FEE539] text-black text-md md:text-lg font-semibold rounded-lg hover:bg-[#e69c00]">Join Us</button>
-          </form>
+                <button type="submit" className="px-4 md:px-8 py-2 bg-gradient-to-r from-[#F8B51C] to-[#FEE539] text-black text-md md:text-lg font-semibold rounded-lg hover:bg-[#e69c00]">Join Us</button>
+              </form>
+            </div>
         </section>
       </main>
     </div>

@@ -1,3 +1,7 @@
 export { default as FaqAccordion } from "./global/FaqAccordion" 
+export { default as PastEngagement } from "./global/PastEngagement"
+export { default as TeamGallery } from "./global/TeamGallery"
+export { default as HeroHeader } from "./global/HeroHeader"
+export { default as AdvancedImageBox } from "./AdvancedImageBox"
 export { default as Header } from "./layout/Header"
 export { default as Footer } from "./layout/Footer"
