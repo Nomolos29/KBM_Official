@@ -17,13 +17,14 @@ const Header: React.FC = () => {
   const navMenu = [
     { name: "About Us", navURL: "/about_us" },
     { name: "Our Team", navURL: "/our-team" },
+    { name: "Our Projects", navURL: "/our_projects" },
     { name: "Contact Us", navURL: "/contact_us" },
   ];
 
   return (
-    <header className="w-full flex justify-center items-center z-50 sticky top-0 p-5 md:p-10">
+    <header className="w-full flex justify-center items-center z-50 sticky top-0">
       <main className="max-w-[1440px] w-full margin-auto relative overflow-hidden">
-        <div className="w-full flex justify-between bg-[#f0e2b34a] top-0 right-0 sticky rounded-full items-center px-5 md:px-7 py-2 md:py-0 backdrop-blur-sm">
+        <div className="w-full flex justify-between bg-[#F0E2B3CC] top-0 right-0 sticky rounded-full items-center px-5 md:px-7 py-2 md:py-0 backdrop-blur-sm">
           {/* Company Logo */}
           <Link href="/" >
             <Image src={logo} alt="Company Logo" width={0} height={0} />
@@ -37,8 +38,8 @@ const Header: React.FC = () => {
                 href={menu.navURL}
                 className={`text-[18px] px-2 py-5 ${
                   pathname === menu.navURL
-                    ? "border-[#FFB100] text-[#FFB100] border-b-[4px]" // Active link styles
-                    : "border-transparent text-black hover:border-[#FFB100] hover:text-[#FFB100] cursor-pointer" // Non-active hover styles
+                    ? "border-[#000000] font-medium text-[#000000] border-b-[4px]" // Active link styles
+                    : "border-transparent text-black hover:border-[#000000] hover:font-medium hover:text-[#000000] cursor-pointer" // Non-active hover styles
                 }`}
               >
                 {menu.name}

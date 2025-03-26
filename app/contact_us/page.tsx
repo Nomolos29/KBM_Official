@@ -4,6 +4,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 // import * as Yup from "yup";
 // import { useFormik } from "formik";
 import React from 'react';
+import { HeroSection } from "@/components";
 
 
 const ContactUs = () => {
@@ -70,6 +71,12 @@ const ContactUs = () => {
 
   return (
     <div className="w-full flex flex-col items-center overflow-hidden">
+      <HeroSection 
+        title='Contact Us' 
+        description='Have a question, idea, or partnership in mind? We’d love to hear from you! Whether you want to learn with us, collaborate, or volunteer, let’s connect.' 
+        backgroundImage="bg-[url(/our-projects/tech-club-cohort.png)] bg-cover bg-center text-white bg-[#302204ae] bg-blend-darken"
+      />
+
       <main className="flex flex-col md:flex-row max-w-[1440px] gap-y-20 md:gap-0 pb-20 pt-10 md:py-20 w-full justify-between px-3 md:px-10">
         <section className="flex flex-col items-center md:items-start gap-y-16 w-full md:w-2/5">
           <h1 className="font-semibold text-5xl leading-none">Contact Us</h1>

@@ -3,7 +3,7 @@
 import Image from "next/image"
 import about from "@/public/aboutUs.svg"
 import WhatWeDo from "@/public/WhatWeDo.svg"
-import { HeroHeader, PastEngagement } from "@/components"
+import { HeroSection, PastEngagement } from "@/components"
 
 const AboutUs = () => {
 
@@ -16,7 +16,11 @@ const AboutUs = () => {
 
   return (
     <div className="w-full flex flex-col items-center">
-      <HeroHeader plainText="About" decoratedText="KBM" description="KBM is an elite training platform dedicated to equipping aspiring and professional developers with world-class skills in emerging technologies and leadership." />
+      <HeroSection 
+        title='About KBM' 
+        description='KBM is a platform dedicated to equipping aspiring and professional developers with world-class skills in emerging technologies and leadership.' 
+        backgroundImage="bg-[url(/our-projects/tech-club-cohort.png)] bg-cover bg-center text-white bg-[#302204ae] bg-blend-darken"
+      />
 
 
       <main className="flex flex-col max-w-[1440px] gap-y-20 md:gap-0 pb-20 pt-10 md:py-20 w-full justify-between px-3 md:px-10 lg:px-20 overflow-hidden">

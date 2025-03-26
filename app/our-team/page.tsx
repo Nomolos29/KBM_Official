@@ -1,10 +1,14 @@
-import { AdvancedImageBox, HeroHeader, PastEngagement, TeamGallery } from '@/components'
+import { AdvancedImageBox, HeroSection, PastEngagement, TeamGallery } from '@/components'
 import React from 'react'
 
 const OurTeam = () => {
   return (
     <main className='w-full flex flex-col justify-center items-center'>
-        <HeroHeader plainText='Meet' decoratedText='Our Team' />
+        <HeroSection 
+          title='Meet Our Team' 
+          description='Behind every milestone at KBM is a team of passionate innovators, educators, and problem-solvers' 
+          backgroundImage="bg-[url(/our-projects/tech-club-cohort.png)] bg-cover bg-center text-white bg-[#302204ae] bg-blend-darken"
+        />
         <AdvancedImageBox />
         <TeamGallery />
         <PastEngagement />
