@@ -20,21 +20,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-@keyframes slideBackground {
-  0% { background-image: url('/images/FLK_2434.jpg'); }
-  25% { background-image: url('/images/FLK_2459.jpg'); }
-  50% { background-image: url('/images/FLK_2496.jpg'); }
-  75% { background-image: url('/images/IMG-20250222-WA0005.jpg'); }
-  100% { background-image: url('/images/IMG-20250222-WA0010.jpg'); }
-}
-
-.animate-slide-bg {
-  background-size: cover;
-  background-position: center;
-  animation: slideBackground 20s infinite ease-in-out;
-  /* Set an initial background */
-  background-image: url('/images/FLK_2434.jpg');
-}
 .section-slider {
   position: relative;
   overflow: hidden;

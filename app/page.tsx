@@ -18,7 +18,6 @@ export default function Home() {
   return (
     <div className="w-full flex flex-col items-center">
       <section className="section-slider text-white flex w-full min-h-[350px] md:min-h-[8%] justify-center items-center px-3 md:px-10 relative">
-        {/* Add this background overlay */}
         <div className="absolute inset-0 bg-[#F8B51C8C] z-0" />
         <div className="relative z-20 max-w-[1440px] w-full flex justify-center items-center gap-y-10 gap-x-20 ">
           <div className="absolute pt-5 z-30 top-[55%]">
@@ -45,7 +44,6 @@ export default function Home() {
               training, hands-on experience, and practical exposure to
               real-life projects
             </p>
-            {/* <span className="py-4 px-8 bg-[#FFB100] w-[200px] text-center text-2xl font-medium cursor-pointer rounded-lg">Get started</span> */}
           </div>
 
           <section className="z-[99] border w-[90%] flex absolute  shadow-md h-[140px] bg-white bottom-[-110px] md:bottom-[-80px] justify-center items-center gap-x-5 px-5 md:gap-x-16 overflow-x-scroll md:overflow-hidden">
@@ -63,18 +61,6 @@ export default function Home() {
           </section>
         </div>
       </section>
-
-      {/* <section className="py-10 md:py-20 flex flex-col md:flex-row justify-center items-center gap-10 max-w-[1440px] w-full px-5 md:px-[60px]">
-        {firstSection.map((card, index) => (
-          <div key={index} className={`flex p-6 flex-col items-center h-fit ${card.color} rounded-2xl text-center gap-y-10 w-[300px]`}>
-            <span className="flex flex-col gap-y-5">
-              <h4 className="font-semibold text-xl">{card.title}</h4>
-              <p className="text-md text-[#636363]">{card.content}</p> 
-            </span>
-            <Link href={card.link}><BsFillArrowRightCircleFill className="text-3xl bg-[#e9e9e9] border border-[#f5f5f5] rounded-full text-[#ffffff98] cursor-pointer" /></Link>
-          </div>
-        ))}
-      </section> */}
       <div className="w-full bg-[#FBDEB533] pt-28 z-0">
         <div className="max-w-[1440px] ">
           <ImageBox
@@ -170,7 +156,6 @@ export default function Home() {
                 Solution
               </span>
             </h1>
-            {/* <span className="h-[3px] w-20 bg-[#FFB100] rounded-full"></span> */}
             <p className="text-center w-full text-md md:text-[18px]">
               At Know the Blocks Maven (KBM), we aim to build an educational hub
               where young adults can access top-notch education in emerging
@@ -247,7 +232,6 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row w-full items-center gap-7 pt-5 relative px-[5%]">
-          {/* Background glow effects */}
           <span className="h-[200px] md:h-[70px] bg-[#ffd268] rounded-full w-full absolute max-w-[1250px] blur-[100px] bottom-[60%] md:bottom-10"></span>
           <span className="h-[200px] md:hidden md:h-[70px] bg-[#ffd268] rounded-full w-full absolute max-w-[1250px] blur-[100px] bottom-[14%] md:bottom-10"></span>
 
@@ -264,7 +248,7 @@ export default function Home() {
             >
               <div className="flex flex-col gap-y-3 rounded-2xl bg-black bg-opacity-70 p-5 h-full text-white">
                 <div className="flex items-center justify-center h-16 w-16 rounded-lg border bg-[#F8B51C] border-transparent">
-                  {solution.icon} {/* Keeping it as an icon component */}
+                  {solution.icon}
                 </div>
                 <h4 className="text-[20px] font-semibold mt-3">
                   {solution.heading}
