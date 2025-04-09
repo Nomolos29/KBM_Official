@@ -29,12 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-between items-center min-h-screen h-full relative`}
       >
-        <header className="sticky z-50 flex -mt-40 py-10 top-0 w-full px-14">
+        <header className="sticky z-[99] flex -mt-40 py-10  top-10 w-full px-14">
           <Header />
         </header>
-        <main className='w-full margin-auto flex'>
-          {children}
-        </main>
+        <main className="w-full margin-auto flex">{children}</main>
         <Footer />
       </body>
     </html>
