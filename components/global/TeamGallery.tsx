@@ -44,10 +44,10 @@ const TeamGallery = () => {
   }, [activeIndex]);
 
   return (
-    <section className="flex justify-center items-center flex-col pt-10 pb-10 md:pt-60 md:pb-20 gap-y-5 w-full bg-[#FAFAFA]">
-      <div className="max-w-[1440px] w-full flex items-center text-[#F8B51C] px-5 md:px-10 gap-x-1">
-        <HiOutlineArrowLongRight className="text-4xl" />
-        <p className="text-xl">Team Members</p>
+    <section className="flex justify-center items-center flex-col pt-10 pb-10 md:pt-60 md:pb-20 gap-y-5 w-full bg-[#FEF8F0]">
+      <div className='max-w-[1440px] w-full flex items-center text-[#F8B51C] px-5 md:px-10 gap-x-1'>
+        <HiOutlineArrowLongRight className='text-4xl' />
+        <p className='text-xl'>Team Members</p>
       </div>
 
       <div className="relative max-w-[1440px] w-full px-5 md:px-10 pb-10 pt-6">

@@ -1,5 +1,6 @@
 export { default as FaqAccordion } from "./global/FaqAccordion" 
 export { default as PastEngagement } from "./global/PastEngagement"
+export { default as NewsletterSection } from "./global/NewsletterSection"
 export { default as TeamGallery } from "./global/TeamGallery"
 export { default as HeroHeader } from "./global/HeroHeader"
 export { default as HeroSection } from "./global/HeroSection"

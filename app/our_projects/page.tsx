@@ -52,7 +52,7 @@ const OurProjects = () => {
             title='Our Projects' 
             description='Turning ideas into impact. From tech education in schools to Web3 solutions and hands-on learning experiences, explore how KBM is driving innovation across Nigeria and beyond.'
             wide 
-            backgroundImage="bg-[url(/our-projects/tech-club-cohort.png)] bg-cover bg-center text-white bg-[#302204ae] bg-blend-darken"
+            backgroundImage="bg-[url(/our-projects/tech-club-cohort.png)] bg-cover bg-center text-white bg-[#30220499] bg-blend-darken"
         />
 
 

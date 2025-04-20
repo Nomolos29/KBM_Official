@@ -7,13 +7,15 @@ const AdvancedImageBox = () => {
   return (
     <section className='w-full flex justify-center'>
         <div className='max-w-[1440px] flex flex-col w-full px-5 md:px-10'>
-            <div className='flex w-full justify-between'>
-                <span className='w-2/5 flex items-center text-[#F8B51C] gap-x-1'>
+            <div className='flex w-full justify-between items-start mt-20 pt-20'>
+                <div className='w-2/5 items-center flex text-[#F8B51C] gap-x-1'>
                     <HiOutlineArrowLongRight className='text-4xl' />
                     <p className='text-xl'>Our Founder</p>
-                </span>
-                <div className='w-3/5 bg-gradient-to-t from-[#FBF6ED] from-[53%] to-[#fff0] to-[50%] flex justify-end '>
-                    <Image src={founderImage} alt='founder image' width={350} />
+                </div>
+                <div className='w-3/5 bg-[url("/founderBG.png")] bg-cover h-[280px] relative'>
+                    <div className='absolute -right-4 -bottom-8'>
+                        <Image src={founderImage} alt='founder image' width={350} />
+                    </div>
                 </div>
             </div>
 
