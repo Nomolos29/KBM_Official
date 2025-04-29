@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { FaChevronLeft, FaChevronRight, FaUserSecret } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { team } from "../utils/team";
 import Link from "next/link";

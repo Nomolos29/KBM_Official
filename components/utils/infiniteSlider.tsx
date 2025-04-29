@@ -10,26 +10,22 @@ const reviews: Review[] = [
   {
     name: "Dawodu Abayomi",
     role: "Graphics Designer/Front End Developer",
-    review:
-      "Starting this course was challenging, but the supportive community and passionate teaching helped me commit.",
+    review: "Starting this course was challenging, but the supportive community and passionate teaching helped me commit.",
   },
   {
     name: "Hakeemat",
     role: "KBM Tech Club Member",
-    review:
-      "The coding class exceeded my expectations. The instructors ensured we learned HTML and CSS effectively.",
+    review: "The coding class exceeded my expectations. The instructors ensured we learned HTML and CSS effectively.",
   },
   {
     name: "Dorcas",
     role: "Student",
-    review:
-      "I'm thrilled about the Blockchain training. Excited for more blockchain courses ahead!",
+    review: "I'm thrilled about the Blockchain training. Excited for more blockchain courses ahead!",
   },
   {
     name: "James",
     role: "Backend Developer",
-    review:
-      "The hands-on experience made all the difference. Highly recommended!",
+    review: "The hands-on experience made all the difference. Highly recommended!",
   },
   {
     name: "Amina",
@@ -48,66 +44,95 @@ const colors: string[] = [
 
 export default function InfiniteSlider() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const scrollSpeed = useRef(1); // Speed can be adjusted based on screen size
 
   useEffect(() => {
-    let animationFrame: number;
+    if (!containerRef.current) return;
 
-    if (!containerRef.current) {
-      console.error("containerRef is null!");
-      return;
-    }
-
-    const animate = () => {
-      if (containerRef.current) {
-        // Increment scroll position
-        containerRef.current.scrollLeft += 2; // Adjust speed as needed
-
-        // Reset scroll position when it reaches the end of the duplicated reviews
-        if (
-          containerRef.current.scrollLeft >=
-          containerRef.current.scrollWidth / 2
-        ) {
-          containerRef.current.scrollLeft = 0; // Reset to the beginning
-        }
-
-        // Request the next animation frame
-        animationFrame = requestAnimationFrame(animate);
-      }
+    // Adjust speed based on screen size
+    const handleResize = () => {
+      scrollSpeed.current = window.innerWidth < 768 ? 0.5 : 1;
     };
 
-    // Start the animation loop
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initial call
+
+    let animationFrame: number;
+    let isPaused = false;
+
+    const animate = () => {
+      if (!containerRef.current || isPaused) return;
+
+      containerRef.current.scrollLeft += scrollSpeed.current;
+
+      if (containerRef.current.scrollLeft >= containerRef.current.scrollWidth / 3) {
+        containerRef.current.scrollLeft = 0;
+      }
+
+      animationFrame = requestAnimationFrame(animate);
+    };
+
+    // Pause on hover
+    const container = containerRef.current;
+    const pause = () => isPaused = true;
+    const resume = () => {
+      isPaused = false;
+      animationFrame = requestAnimationFrame(animate);
+    };
+
+    container.addEventListener('mouseenter', pause);
+    container.addEventListener('mouseleave', resume);
+    container.addEventListener('touchstart', pause);
+    container.addEventListener('touchend', resume);
+
     animationFrame = requestAnimationFrame(animate);
 
-    // Cleanup function to stop the animation
-    return () => cancelAnimationFrame(animationFrame);
+    return () => {
+      cancelAnimationFrame(animationFrame);
+      container.removeEventListener('mouseenter', pause);
+      container.removeEventListener('mouseleave', resume);
+      container.removeEventListener('touchstart', pause);
+      container.removeEventListener('touchend', resume);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
-    <section className="relative py-10">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-6">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-10 mx-auto max-w-7xl">
+      <h2 className="text-3xl md:text-5xl font-semibold text-gray-800 text-center mb-8">
         Our <span className="text-yellow-500">Reviews</span>
       </h2>
-      <div className="relative overflow-x-hidden w-[900px]">
-        {/* Inner container for reviews */}
+
+      <div className="relative w-full overflow-hidden">
         <div
           ref={containerRef}
-          className="flex gap-6 whitespace-nowrap"
-          style={{ willChange: "transform" }}
+          className="flex gap-6 w-full overflow-x-scroll hide-scrollbar py-2"
+          style={{ willChange: 'transform' }}
         >
           {[...reviews, ...reviews].map((review, index) => (
             <div
-              key={index}
-              className={`p-6 w-[300px] rounded-xl shadow-md inline-block ${
+              key={`${review.name}-${index}`}
+              className={`flex-shrink-0 w-80 p-6 cursor-pointer rounded-xl shadow-md ${
                 colors[index % colors.length]
               }`}
             >
-              <h4 className="font-bold">{review.name}</h4>
-              <p className="text-sm text-gray-600">{review.role}</p>
-              <p className="mt-3 text-gray-700">{review.review}</p>
+              <h4 className="font-bold text-lg">{review.name}</h4>
+              <p className="text-sm text-gray-600 mb-3">{review.role}</p>
+              <p className="text-gray-700">{review.review}</p>
             </div>
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 }

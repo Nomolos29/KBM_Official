@@ -24,14 +24,14 @@ const Header: React.FC = () => {
   return (
     <header className="w-full flex justify-center items-center z-50 sticky top-0">
       <main className="max-w-[1440px] w-full margin-auto relative overflow-hidden">
-        <div className="w-full flex justify-between bg-[#F0E2B3CC] top-0 right-0 sticky rounded-full items-center px-5 md:px-7 py-2 md:py-0 backdrop-blur-sm">
+        <div className="w-full flex justify-between bg-[#F0E2B3CC] top-0 right-0 sticky rounded-full items-center px-5 lg:px-7 py-2 lg:py-0 backdrop-blur-sm">
           {/* Company Logo */}
           <Link href="/" >
             <Image src={logo} alt="Company Logo" width={0} height={0} />
           </Link>
 
           {/* Navigation Menu */}
-          <nav className="hidden md:flex justify-center gap-x-5 items-center">
+          <nav className="hidden lg:flex justify-center gap-x-5 items-center">
             {navMenu.map((menu, index) => (
               <Link
                 key={index}
@@ -56,14 +56,14 @@ const Header: React.FC = () => {
               Join Us
             </Link>
 
-            <AiOutlineMenuFold className={`text-4xl md:hidden ${opened && "rotate-180"} duration-300`} onClick={() => setOpened(true)} />
+            <AiOutlineMenuFold className={`text-4xl lg:hidden ${opened && "rotate-180"} duration-300`} onClick={() => setOpened(true)} />
           </div>
         </div>
 
-        <div className={`flex md:hidden h-fit fixed rounded-2xl w-[65%] shadow-xl shadow-[#1f1f1f6d] bg-[#ffe77d17]  z-50 right-0 top-5 ${opened ? "translate-x-[-10%]" : "translate-x-[110%]"} ease-in-out backdrop-blur-sm duration-500`}>
+        <div className={`flex lg:hidden h-fit fixed rounded-2xl w-[65%] shadow-xl shadow-[#1f1f1f6d] bg-[#ffd86196]  z-50 right-0 top-5 md:top-3 ${opened ? "translate-x-[-10%] md:translate-x-[-11%]" : "translate-x-[110%]"} ease-in-out backdrop-blur-md duration-500`}>
           <nav className="flex flex-col justify-between gap-y-5 px-6 py-4 text-right pb-20 w-full overflow-hidden">
             <span className="flex w-full justify-between">
-              <AiOutlineMenuUnfold className={`text-4xl md:hidden mb-5 ${!opened && "rotate-180"} duration-200`} onClick={() => setOpened(false)} />
+              <AiOutlineMenuUnfold className={`text-4xl lg:hidden mb-5 ${!opened && "rotate-180"} duration-200`} onClick={() => setOpened(false)} />
               <h4 className="font-semibold text-xl">Menu</h4>
             </span>
 
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
                     className={`${
                       pathname === menu.navURL
                         ? "border-[#FFB100] text-[#FFB100]" // Active link styles
-                        : "border-transparent text-black hover:border-[#FFB100] hover:text-[#FFB100] cursor-pointer" // Non-active hover styles
+                        : "border-transparent text-black font-medium md:text-xl hover:border-[#FFB100] hover:text-[#FFB100] cursor-pointer" // Non-active hover styles
                     }`}
                   >
                     {menu.name}

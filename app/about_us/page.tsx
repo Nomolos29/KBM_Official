@@ -1,26 +1,26 @@
 // "use client"
 
 import Image from "next/image";
-import about from "@/public/aboutUs.svg";
-import WhatWeDo from "@/public/WhatWeDo.svg";
-import { HeroSection, PastEngagement } from "@/components";
+// import about from "@/public/aboutUs.svg";
+// import WhatWeDo from "@/public/WhatWeDo.svg";
+import { HeroSection } from "@/components";
 import features1 from "@/public/feaures1.svg";
 import features2 from "@/public/feaures2.svg";
 import features3 from "@/public/feaures3.svg";
 import features4 from "@/public/feaures4.svg";
 import Link from "next/link";
-import ImageBox from "@/components/global/ImageBox";
+// import ImageBox from "@/components/global/ImageBox";
 import { Why } from "@/components/utils/team";
 import image from "@/public/images/Frame 212997.png";
 import Subscribe from "@/components/global/subcribe";
 
 const AboutUs = () => {
-  const WhyChooseKBM = [
-    "Comprehensive Training: Develop in-demand skills in software engineering and blockchain technology.",
-    "Real-World Projects: Gain hands-on experience with practical, real-world applications.",
-    "Career-Ready Professionals: Graduate as a highly skilled, competitive entry to mid-level software engineer.",
-    "At KBM, we’re not just building skills; we’re building futures. Start your journey with us today and be a part of the tech revolution!",
-  ];
+  // const WhyChooseKBM = [
+  //   "Comprehensive Training: Develop in-demand skills in software engineering and blockchain technology.",
+  //   "Real-World Projects: Gain hands-on experience with practical, real-world applications.",
+  //   "Career-Ready Professionals: Graduate as a highly skilled, competitive entry to mid-level software engineer.",
+  //   "At KBM, we’re not just building skills; we’re building futures. Start your journey with us today and be a part of the tech revolution!",
+  // ];
   const features = [
     {
       icon: features1,

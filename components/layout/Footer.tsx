@@ -55,8 +55,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className=" ">
-      {/* <main className="max-w-[1440px] w-full margin-auto pt-2 flex justify-between items-center text-white">
+    <footer className="bg-black w-full">
+      <main className="max-w-[1440px] w-full margin-auto pt-2 flex justify-between items-center text-white">
         <section className="flex flex-col w-full md:w-[50%] md:flex-row justify-between md:items-center gap-10 md:gap-x-20">
           <Link href="/" className="w-[50%] md:w-[40%]">
             <Image
@@ -96,7 +96,7 @@ const Footer = () => {
             className=""
           />
         </section>
-      </main> */}
+      </main>
     </footer>
   );
 };
