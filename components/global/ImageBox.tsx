@@ -71,7 +71,7 @@ const ImageBox: React.FC<ImageBoxProps> = ({
                     : titleSize == "lg"
                     ? "text-[22px] md:text-[36px]"
                     : titleSize == "xl"
-                    ? "text-[22px] md:text- [56px]"
+                    ? "text-[22px] md:text-[56px]"
                     : "text-[22px] md:text-[32px]"
                 } ${reverse ? "lg:pl-5" : "lg:pr-5"} font-bold leading-tight`}
               >
@@ -80,7 +80,7 @@ const ImageBox: React.FC<ImageBoxProps> = ({
             </section>
 
             <p
-              className={`text-md md:text-xl md:leading-relaxed ${
+              className={`text-lg  md:text-xl md:leading-relaxed ${
                 light ? "text-white" : "text-[#212121]"
               }`}
             >

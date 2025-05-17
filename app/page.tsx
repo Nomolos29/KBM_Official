@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       <div className="w-full bg-[#FBDEB533] pt-[400px] px-6 lg:px-0 md:pt-14 lg:pt-28 z-0">
-        <div className="w-full">
+        <div className="w-full pb-14 md:pb-0">
           <ImageBox
             imgSectionText={
               <div className="text-black flex flex-col gap-y-5">
@@ -117,13 +117,14 @@ export default function Home() {
                   </span>
                   <span>
                     We go beyond technical training by offering structured
-                    mentorship, real-world industry challenges, and direct
+                    mentorship, real-world industry challengelg:p-7 s, and direct
                     hiring partnerships...
                   </span>
                 </p>
               </div>
             }
             imgSectionTitle="What We Do"
+            titleSize="lg"
             imageSrc="/images/hackathon-award.jpg"
             gap
             button
@@ -137,9 +138,9 @@ export default function Home() {
 
 
       <section className="flex justify-center items-center w-full bg-[url('/images/IMG-20250222-WA0005.jpg')] bg- bg-cover py-10 lg:py-20  px-5 md:px-20 lg:px-[70px]">
-        <div className="max-w-[1440px] w-full flex flex-col items-center gap-y-5 md:gap-y-10 lg:p-7 rounded-[16px] text-center backdrop-blur-sm md:p-10 bg-[#00000064] text-white">
+        <div className="max-w-[1440px] w-full flex flex-col items-center gap-y-5 md:gap-y-10 rounded-[16px] text-center backdrop-blur-sm md:px-10 md:py-14 bg-[#00000064] text-white">
           <h2 className="text-[28px] md:text-[40px] font-bold">About KBM</h2>
-          <p className="text-md md:text-[24px]">
+          <p className="text-md md:text-[24px] md:max-w-[70%]">
             KBM is an elite platform dedicated to equipping aspiring and
             professional developers with world-class skills in emerging
             technologies and leadership. We empower the next generation of
