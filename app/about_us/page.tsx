@@ -13,6 +13,7 @@ import Link from "next/link";
 import { Why } from "@/components/utils/team";
 import image from "@/public/images/Frame 212997.png";
 import Subscribe from "@/components/global/subcribe";
+import ImageBox from "@/components/global/ImageBox";
 
 const AboutUs = () => {
   // const WhyChooseKBM = [
@@ -67,7 +68,7 @@ const AboutUs = () => {
         backgroundImage="bg-[url(/our-projects/tech-club-cohort.png)] bg-cover bg-center text-white bg-[#302204ae] bg-blend-darken"
       />
 
-      <main className="flex flex-col max-w-[1440px] gap-y-20 md:gap-0 pb-20 pt-10 md:py-20 w-full justify-between px-3 overflow-hidden">
+      <main className="flex flex-col max-w-[1440px] gap-y-20 md:gap-0 pt-10 md:pt-20 w-full justify-between overflow-hidden">
         <section className="relative flex justify-end items-center bg-gray-50 px-[10%]">
           <div className={`${"h-[600px] w-[550px]"} flex`}>
             <div className="w-full relative">
@@ -100,6 +101,77 @@ const AboutUs = () => {
                 career.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="w-full bg-[#FBDEB533] pt-[400px] px-6 lg:px-0 md:pt-14 lg:pt-28 z-0">
+          <div className="w-full pb-14 md:pb-0">
+            <ImageBox
+              imgSectionText={
+                <div className="text-black flex flex-col gap-y-5">
+                  <p>
+                    At KBM, we deliver intensive training programs designed to
+                    transform aspiring tech enthusiasts—including beginners,
+                    self-taught developers, and career switchers—into
+                    industry-ready professionals.
+                  </p>
+                  <p className="flex gap-10 items-start">
+                    <span className="pt-2">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="20" height="20" rx="10" fill="#1B1B1B" />
+                        <path
+                          d="M13.541 6L8.95898 11.5232L6.25 9.04821L5 10.1911L9.16602 14L15 7.14286L13.541 6Z"
+                          fill="#F8B51C"
+                        />
+                      </svg>
+                    </span>
+                    <span>
+                      Our courses, ranging from 1 to 6 months, are tailored to
+                      provide a strong foundation in software development, other
+                      emerging technologies, and leadership through hands-on
+                      projects, live coding sessions, and expert-led workshops.
+                    </span>
+                  </p>
+                  <p className="flex gap-10 items-start">
+                    <span className="pt-2">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width="20" height="20" rx="10" fill="#1B1B1B" />
+                        <path
+                          d="M13.541 6L8.95898 11.5232L6.25 9.04821L5 10.1911L9.16602 14L15 7.14286L13.541 6Z"
+                          fill="#F8B51C"
+                        />
+                      </svg>
+                    </span>
+                    <span>
+                      We go beyond technical training by offering structured
+                      mentorship, real-world industry challengelg:p-7 s, and direct
+                      hiring partnerships...
+                    </span>
+                  </p>
+                </div>
+              }
+              imgSectionTitle="What We Do"
+              titleSize="lg"
+              imageSrc="/images/hackathon-award.jpg"
+              gap
+              button
+              textSize="lg"
+              imageSize="lg"
+              imageBorder
+              alignment="top"
+            />
           </div>
         </section>
 
@@ -188,23 +260,6 @@ const AboutUs = () => {
           </div>
         </section>
         <Subscribe />
-        {/* <section className="md:pt-32 flex flex-col items-center w-full md:gap-y-10">
-          <h1 className="text-2xl md:text-4xl xl:text-5xl font-semibold border-[#F0E2B3] border-b-[3px] xl:w-[34%] pb-1 md:pb-3">Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Photo Gallery</span></h1>
-
-          <div className="flex w-full gap-4 pt-10 md:py-10">
-            <Image src="/galleryImage1.svg" alt="" width={0} height={0} className="w-[32%]" />
-
-            <div className="w-[68%] flex flex-col gap-4">
-              <span>
-                <Image src="/GalleryImage2.svg" alt="" width={0} height={0} className="w-full h-fit" />
-              </span>
-              <div className="flex justify-between w-full gap-4">
-                <Image src="/GalleryImage3.svg" alt="" width={0} height={0} className="w-[48%]" />
-                <Image src="/GalleryImage4.svg" alt="" width={0} height={0} className="w-[48%]" />
-              </div>
-            </div>
-          </div>
-        </section> */}
       </main>
     </div>
   );

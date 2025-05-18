@@ -20,11 +20,11 @@ function Subscribe() {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="md:rounded-l-full rounded-full text-lg h-[60px] px-5 md:px-7 text-gray-400 w-full md:w-8/12 outline-none "
+                className="md:rounded-l-full rounded-full md:rounded-r-none text-lg h-[60px] px-5 md:px-7 text-gray-400 w-full md:w-8/12 outline-none "
               />
               <button
                 type="submit"
-                className="rounded-full md:rounded-r-full w-full text-xl h-[60px] md:w-4/12 bg-[#F8B51C] ml-[-2px] hover:bg-yellow-500 text-[#1B1B1B] px-2 font-semibold transition"
+                className="rounded-full md:rounded-r-full md:rounded-l-none w-full text-xl h-[60px] md:w-4/12 bg-[#F8B51C] ml-[-2px] hover:bg-yellow-500 text-[#1B1B1B] px-2 font-semibold transition"
               >
                 Subscribe
               </button>

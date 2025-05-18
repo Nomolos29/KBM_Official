@@ -1,4 +1,5 @@
-import { AdvancedImageBox, HeroSection, NewsletterSection, PastEngagement, TeamGallery } from '@/components'
+import { AdvancedImageBox, HeroSection, PastEngagement, TeamGallery } from '@/components'
+import Subscribe from '@/components/global/subcribe';
 import React from 'react'
 
 const OurTeam = () => {
@@ -12,7 +13,7 @@ const OurTeam = () => {
         <AdvancedImageBox />
         <TeamGallery />
         <PastEngagement />
-        <NewsletterSection />
+        <Subscribe />
     </main>
   );
 };

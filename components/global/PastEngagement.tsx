@@ -49,7 +49,7 @@ const PastEngagement = () => {
 
   return (
     <section className="flex justify-center flex-col py-10 px-10 md:py-20 items-center w-full">
-        <div className="max-w-[1440px] w-full text-center flex flex-col items-center md:px-10 gap-y-6">
+        <div className="max-w-[1440px] w-full text-center flex flex-col items-center md:px-16 gap-y-6">
           <h1 className="text-3xl md:text-5xl font-semibold">Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Past Engagements</span></h1>
 
           <p className='text-xl text-[#777777] lg:px-[10%]'>Step into the world of KBM! Our photo gallery captures the energy, innovation, and impact of our training programs, hands-on projects, and community events. See our students in action, industry experts sharing knowledge, and the milestones we&apos;re achieving together.</p>
@@ -83,7 +83,7 @@ const PastEngagement = () => {
                 key={index}
                 className={`flex-shrink-0 w-auto p-5 transition-transform duration-700 ${
                   activeIndex === index
-                    ? "bg-gradient-to-r from-[#ffe8b68c] to-[#E2E2E24D] absolute right-[3%] md:right-[15%] top-[14%] scale-[1.15] md:w-[70%] xl:w-[52%] lg:right-[15%] lg:top-20 xl:top-16 xl:right-[calc(24%)] z-10 border-white border shadow-md"
+                    ? "bg-gradient-to-r from-[#ffe8b68c] to-[#E2E2E24D] absolute right-[3%] md:right-[15%] top-[14%] scale-[1.15] md:w-[70%] xl:w-[52%] lg:right-[15%] lg:top-20 xl:top-24 xl:right-[calc(24%)] z-10 border-white border shadow-md"
                     : "opacity-15 h-full lg:top-0 xl:right-0"
                 }`}
                 onClick={() => setActiveIndex(index)}

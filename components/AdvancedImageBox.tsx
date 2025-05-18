@@ -6,7 +6,7 @@ import founderImage from "@/public/founderImage.png"
 const AdvancedImageBox = () => {
   return (
     <section className='w-full flex justify-center'>
-        <div className='max-w-[1440px] flex flex-col w-full px-5 md:px-10'>
+        <div className='max-w-[1440px] flex flex-col w-full px-5 md:px-20'>
             <div className='flex w-full justify-between items-start mt-20 pt-20'>
                 <div className='w-2/5 items-center flex text-[#F8B51C] gap-x-1'>
                     <HiOutlineArrowLongRight className='text-4xl' />
@@ -19,7 +19,7 @@ const AdvancedImageBox = () => {
                 </div>
             </div>
 
-            <article className='flex flex-col gap-y-10 py-14 px-10 shadow-md bg-white w-3/5 -my-28 z-10'>
+            <article className='flex flex-col gap-y-10 py-14 px-10 shadow-md bg-white w-[70%] -my-28 z-10'>
                 <h2 className='text-[32px] font-bold text-black'>Ayomide Arowolo</h2>
                 <div className='flex flex-col gap-y-5 text-lg'>
                     <p>
