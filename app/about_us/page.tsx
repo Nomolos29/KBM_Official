@@ -68,43 +68,38 @@ const AboutUs = () => {
         backgroundImage="bg-[url(/our-projects/tech-club-cohort.png)] bg-cover bg-center text-white bg-[#302204ae] bg-blend-darken"
       />
 
-      <main className="flex flex-col max-w-[1440px] gap-y-20 md:gap-0 pt-10 md:pt-20 w-full justify-between overflow-hidden">
-        <section className="relative flex justify-end items-center bg-gray-50 px-[10%]">
-          <div className={`${"h-[600px] w-[550px]"} flex`}>
-            <div className="w-full relative">
-              <div className="w-[304px] h-[279px] bg-[#F8B51C]"></div>
+      <main className="flex flex-col w-full items-center">
+        <section className="flex justify-center w-full bg-gray-50">
+          <div className="w-full flex flex-col-reverse md:flex-row max-w-[1440px] py-20 px-8 md:px-10 lg:px-16">
+            <div className="flex flex-col w-full md:w-[70%] lg:w-[50%] h-fit -mt-[200px] md:mt-[100px] md:-mr-[200px] z-[1] bg-white shadow-lg">
+              <div className="py-[52px] px-8 md:px-[38px] lg:px-[52px] text-lg flex flex-col gap-y-10">
+                <p className="text-gray-700">
+                  We empower the next generation of developers through cutting-edge training, hands-on experience, structured mentorship with industry experts, and direct exposure to real-life projects and hiring partners.
+                </p>
+                <p className="text-gray-700">
+                  Unlike traditional coding bootcamps, KBM integrates Web3 literacy, AI and leadership development, and real-world industry challenges, ensuring our graduates are not only skilled but also future-ready. We also provide mentorship, internship, scholarship opportunities and accessible learning pathways to make tech education inclusive for all.
+                </p>
+                <p className="text-gray-700 font-medium pt-5">
+                  Join KBM and transform your potential into a thriving tech
+                  career.
+                </p>
+              </div>
+            </div>
+            <div className="w-full md:w-[70%] h-[400px] md:h-[800px] relative">
+              <div className="w-1/2 h-1/2 bg-[#F8B51C]" />
 
               <Image
                 width={1000}
                 height={1000}
                 src={image}
                 alt="Section image"
-                className="absolute top-3 left-3"
+                className="absolute top-3 left-3 max-h-full"
               />
-            </div>
-          </div>
-          <div className="absolute flex top-16 flex-col md:flex-row bg-white rounded-2xl shadow-lg overflow-hidden max-w-[470px] mr-[20%]">
-            <div className="py-14 px-8  flex flex-col justify-center">
-              <p className="text-gray-700 mb-4">
-                We empower the next generation of developers through
-                cutting-edge training, hands-on experience, structured
-                mentorship with industry experts, and direct exposure to
-                real-life projects and hiring partners.
-              </p>
-              <p className="text-gray-700 mb-4">
-                Unlike traditional coding bootcamps, KBM integrates Web3
-                literacy, AI and leadership development, and real-world industry
-                challenges...
-              </p>
-              <p className="text-gray-700">
-                Join KBM and transform your potential into a thriving tech
-                career.
-              </p>
             </div>
           </div>
         </section>
 
-        <section className="w-full bg-[#FBDEB533] pt-[400px] px-6 lg:px-0 md:pt-14 lg:pt-28 z-0">
+        <section className="w-full bg-[#FBDEB533] px-6 lg:px-0">
           <div className="w-full pb-14 md:pb-0">
             <ImageBox
               imgSectionText={
@@ -175,53 +170,53 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="flex justify-between items-center px-4 md:px-0 w-full flex-col-reverse md:flex-row gap-x-10 xl:gap-x-20 relative md:pt-24 gap-y-7">
-          <section className="">
-            <div className="w-full md:w-[600px] lg:w-[800px] mx-auto text-center flex flex-col justify-center items-center gap-y-4 md:gap-y-8 pb-10">
-              <h1 className="text-3xl md:text-5xl font-semibold">
-                Why
-                <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent pl-3">
-                  Choose KBM
-                </span>
-              </h1>
-              <p className="text-center w-full text-md md:text-[18px]">
-                At Know the Blocks Maven (KBM), we aim to build an educational
-                hub where young adults can access top-notch education in
-                emerging technologies and gain a deep understanding of the Tech
-                Ecosystem.
-              </p>
-            </div>
-            <div className="flex flex-col md:flex-row w-full items-center gap-7 pt-5 relative px-[5%]">
-              {Why.map((solution, index) => (
-                <div
-                  key={index}
-                  className="border-[#F8B51C] rounded-2xl border h-[250px] md:h-[400px] lg:h-[250px] z-10 "
-                  style={{
-                    backgroundImage: `url(${solution.bgImage})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                  }}
-                >
-                  <div className="flex flex-col gap-y-3 rounded-2xl bg-black bg-opacity-70 p-5 h-full text-white">
-                    <div className="flex items-center justify-center h-16 w-16 rounded-lg border bg-[#F8B51C] border-transparent">
-                      {solution.icon}
-                    </div>
-                    <h4 className="text-[20px] font-semibold mt-3">
-                      {solution.heading}
-                    </h4>
-                    <p>{solution.description}</p>
+        
+        <section className="flex justify-between items-center py-14 px-4 md:px-0 w-full flex-col gap-x-10 xl:gap-x-20 relative md:pt-24 gap-y-5">
+          <div className="w-full md:w-[600px] lg:w-[800px] mx-auto text-center flex flex-col justify-center items-center gap-y-4 md:gap-y-8 pb-10">
+            <h1 className="text-3xl md:text-5xl font-semibold">
+              Why
+              <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent pl-3">
+                Choose KBM
+              </span>
+            </h1>
+            <p className="text-center w-full text-md md:text-[18px]">
+              At Know the Blocks Maven (KBM), we aim to build an educational
+              hub where young adults can access top-notch education in
+              emerging technologies and gain a deep understanding of the Tech
+              Ecosystem.
+            </p>
+          </div>
+          <div className="flex flex-col md:flex-row w-full items-center gap-7 relative px-3 md:px-[5%]">
+            {Why.map((solution, index) => (
+              <div
+                key={index}
+                className="border-[#F8B51C] rounded-2xl border h-[250px] md:h-[400px] lg:h-[250px] z-10 "
+                style={{
+                  backgroundImage: `url(${solution.bgImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <div className="flex flex-col gap-y-3 rounded-2xl bg-black bg-opacity-70 p-5 h-full text-white">
+                  <div className="flex items-center justify-center h-16 w-16 rounded-lg border bg-[#F8B51C] border-transparent">
+                    {solution.icon}
                   </div>
+                  <h4 className="text-[20px] font-semibold mt-3">
+                    {solution.heading}
+                  </h4>
+                  <p>{solution.description}</p>
                 </div>
-              ))}
-            </div>
-          </section>
+              </div>
+            ))}
+          </div>
         </section>
+
+
         <section className="flex flex-col justify-center py-10 md:py-20 items-center w-full bg-white">
-          <div className="max-w-[1440px] w-full flex flex-col items-center pb-10 px-10 gap-y-5">
+          <div className="max-w-[1440px] w-full flex flex-col items-center lg:pt-10 px-10 gap-y-5">
             <h1 className="text-3xl md:text-5xl text-center font-semibold">
-              Explore Our
-              <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">
+              Explore Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">
                 Dynamic Features
               </span>
             </h1>
@@ -229,10 +224,10 @@ const AboutUs = () => {
             <p className="text-lg text-center">Learn and Engage</p>
           </div>
 
-          <div className="max-w-[1440px] w-full justify-between items-center flex px-0 md:px-40">
-            <div className="flex flex-wrap gap-5 justify-center md:pt-10 md:pb-20 w-full border-b-[1px] border-[#F8B51C]">
+          <div className="max-w-[1440px] w-full justify-between items-center flex px-7 md;px-10 lg:px-20">
+            <div className="flex flex-wrap gap-5 justify-center md:pt-10 md:pb-10 w-full">
               {features.map((feature, index) => (
-                <span
+                <div
                   key={index}
                   className={`py-7 px-5 md:px-10 w-full md:w-[48%] ${feature.color} md:shadow-md md:shadow-[#ffd981e8] justify-between flex flex-col gap-y-2 rounded-lg`}
                 >
@@ -250,11 +245,11 @@ const AboutUs = () => {
                   </div>
                   <Link
                     href={feature.link}
-                    className="underline text-[#FFB100] cursor-pointer"
+                    className=" text-[#FFB100] cursor-pointer"
                   >
                     {feature.cta}
                   </Link>
-                </span>
+                </div>
               ))}
             </div>
           </div>

@@ -44,17 +44,17 @@ const TeamGallery = () => {
   }, [activeIndex]);
 
   return (
-    <section className="flex justify-center items-center flex-col md:px-14 pt-10 pb-10 md:pt-60 md:pb-20 gap-y-5 w-full bg-[#FEF8F0]">
+    <section className="flex justify-center items-center flex-col md:px-14 pt-44 pb-10 md:pt-60 md:pb-20 gap-y-5 w-full bg-[#FEF8F0]">
       <div className='max-w-[1440px] w-full flex items-center text-[#F8B51C] px-5 md:px-10 gap-x-1'>
         <HiOutlineArrowLongRight className='text-4xl' />
         <p className='text-xl'>Team Members</p>
       </div>
 
-      <div className="relative max-w-[1440px] w-full px-5 md:px-10 pb-10 pt-6">
+      <div className="relative max-w-[1440px] w-full px-5 md:px-10 pb-10 pt-20 md:pt-6">
         {/* Navigation Arrows */}
         <button
           type="button"
-          className="absolute left-0 top-[30%] transform -translate-y-1/2 z-20 bg-black/20 mx-1 md:mx-4 text-white rounded-full p-3 cursor-pointer"
+          className="absolute left-0 top-[40%] transform -translate-y-1/2 z-20 bg-black/20 mx-1 md:mx-4 text-white rounded-full p-3 cursor-pointer"
           onClick={prevCard}
           aria-label="Previous team member"
         >
@@ -62,7 +62,7 @@ const TeamGallery = () => {
         </button>
         <button
           type="button"
-          className="absolute right-0 top-[30%] transform -translate-y-1/2 z-20 bg-black/20 mx-1 md:mx-4 text-white rounded-full p-3 cursor-pointer"
+          className="absolute right-0 top-[40%] transform -translate-y-1/2 z-20 bg-black/20 mx-1 md:mx-4 text-white rounded-full p-3 cursor-pointer"
           onClick={nextCard}
           aria-label="Next team member"
         >
@@ -78,10 +78,10 @@ const TeamGallery = () => {
           {team.map((person, index) => (
             <div
               key={index}
-              className={`flex flex-col gap-y-10 transition-transform duration-300 ${
+              className={`flex flex-col gap-y-10 justify-evenly transition-transform duration-300 ${
                 activeIndex === index
-                  ? "bg-gradient-to-r lg:w-[301px] h-[350px] justify-evenly p-5 items-center text-center from-[#eedca1] to-[#9e9e9e] absolute -top-2 right-[calc(100%/5-12px)] md:right-[34%] xl:right-[calc(40%)] z-10 shadow-md rounded-lg backdrop-blur-sm scale-[1.2]"
-                  : "items-left border bg-white"
+                  ? "bg-gradient-to-r lg:w-[301px] h-[350px] p-5 items-center text-center from-[#eedca1] to-[#9e9e9e] absolute md:-top-2 right-[calc(100%/5-12px)] md:right-[34%] xl:right-[calc(40%)] z-10 shadow-md rounded-lg backdrop-blur-sm scale-[1.2]"
+                  : "items-left rounded-lg h-[300px] bg-white"
               }`}
               onClick={() => setActiveIndex(index)}
             >

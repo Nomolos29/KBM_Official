@@ -56,13 +56,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       >
         <div
           className={`w-full flex flex-col justify-center items-center gap-y-12 ${
-            imageUrl ? "py-14" : "h-[650px]"
+            imageUrl ? "py-14" : "h-[400px] md:h-[650px]"
           }`}
         >
           <div
             className={`${
-              wide ? "w-[1000px]" : maxWidth ? "max-w-[1440px]" : "w-[720px]"
-            } mx-auto flex flex-col py-5 justify-between items-center gap-6 text-center ${
+              wide ? "w-[1000px]" : maxWidth ? "max-w-[1440px]" : "md:w-[720px]"
+            } mx-auto flex flex-col pt-24 md:py-5 justify-between items-center gap-6 text-center ${
               isVisible ? "animate-fade-in-up" : "opacity-0"
             }`}
           >

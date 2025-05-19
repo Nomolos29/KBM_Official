@@ -41,7 +41,7 @@ const ImageBox: React.FC<ImageBoxProps> = ({
   listItems,
 }) => {
   return (
-    <section className="flex w-full justify-center transition-all duration-500 ease-in-out hover:bg-opacity-80 md:px-16 xl:px-16 lg:gap-y-12 py-20">
+    <section className="flex w-full justify-center transition-all duration-500 ease-in-out hover:bg-opacity-80 md:px-16 xl:px-16 lg:gap-y-12 pt-20">
       <div
         className={`max-w-[1440px] w-full ${
           alignment == "bottom"
@@ -49,12 +49,12 @@ const ImageBox: React.FC<ImageBoxProps> = ({
             : alignment == "top"
             ? "lg:items-start"
             : "lg:items-center"
-        } flex justify-between gap-x-16 flex-col lg:flex-row ${
-          reverse && "lg:flex-row-reverse text-right"
+        } flex justify-between gap-x-10 flex-col lg:flex-row ${
+          reverse && "lg:flex-row-reverse md:text-right"
         }`}
       >
-        <article className="flex flex-col justify-center w-full lg:w-1/2 gap-y-3 md:gap-y-14">
-          <div className="flex flex-col gap-y-10 w-full lg:w-[500px]">
+        <article className="flex flex-col justify-center w-full lg:w-[55%] gap-y-3 md:gap-y-14">
+          <div className="flex flex-col gap-y-10 w-full lg:w-full">
             <section
               className={`flex items-center gap-x-4 ${
                 reverse && "lg:flex-row-reverse"
@@ -80,7 +80,7 @@ const ImageBox: React.FC<ImageBoxProps> = ({
             </section>
 
             <p
-              className={`text-lg  md:text-xl md:leading-relaxed ${
+              className={`text-lg w-full md:text-xl md:leading-relaxed ${
                 light ? "text-white" : "text-[#212121]"
               }`}
             >
@@ -131,8 +131,8 @@ const ImageBox: React.FC<ImageBoxProps> = ({
             imageSize == "sm"
               ? "h-full lg:h-[640px] w-full lg:w-[550px]"
               : imageSize == "lg"
-              ? "md:h-[550px] w-full mb-10 md:mb-0 pr-5 md:pr-0 lg:w-[550px]"
-              : "lg:h-[400px] w-full lg:w-[500px]"
+              ? "md:h-[550px] w-full mb-10 md:mb-0 pr-5 md:pr-0 lg:w-[65%]"
+              : "lg:h-[400px] h-fit w-full lg:w-[500px]"
           } flex`}
         >
           {imageSrc && (
@@ -145,7 +145,7 @@ const ImageBox: React.FC<ImageBoxProps> = ({
                 height={1000}
                 src={imageSrc}
                 alt="Section image"
-                className={imageBorder ? "absolute w-full md:h-[80%] bg-cover top-3 left-3" : ""}
+                className={imageBorder ? "absolute w-full h-fit md:h-full bg-cover top-3 left-3" : ""}
               />
             </div>
           )}

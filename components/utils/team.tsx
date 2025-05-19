@@ -282,6 +282,7 @@ export const keyAchievements = [
     title: "Scholarships",
   },
 ];
+
 export const logos = [
   {
     logo: <Seb />,
@@ -297,6 +298,8 @@ export const logos = [
     logo: <Scrib />,
   },
 ];
+
+
 export const cards: CardProps[] = [
   {
     name: "Dawodu Abayomi",
@@ -372,6 +375,8 @@ export const ourSolution = [
     bgImage: "/images/tech.jpg",
   },
 ];
+
+
 export const Why = [
   {
     icon: <Skills />,

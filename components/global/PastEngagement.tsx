@@ -48,7 +48,7 @@ const PastEngagement = () => {
     ]
 
   return (
-    <section className="flex justify-center flex-col py-10 px-10 md:py-20 items-center w-full">
+    <section className="flex justify-center flex-col py-16 px-10 md:py-20 items-center w-full">
         <div className="max-w-[1440px] w-full text-center flex flex-col items-center md:px-16 gap-y-6">
           <h1 className="text-3xl md:text-5xl font-semibold">Our <span className="bg-gradient-to-r from-[#F8B51C] to-[#FEE539] bg-clip-text text-transparent">Past Engagements</span></h1>
 

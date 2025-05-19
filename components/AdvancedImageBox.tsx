@@ -19,7 +19,7 @@ const AdvancedImageBox = () => {
                 </div>
             </div>
 
-            <article className='flex flex-col gap-y-10 py-14 px-10 shadow-md bg-white w-[70%] -my-28 z-10'>
+            <article className='flex flex-col gap-y-10 py-14 px-7 md:px-10 shadow-md bg-white w-[90%z] md:w-[70%] -my-28 z-10'>
                 <h2 className='text-[32px] font-bold text-black'>Ayomide Arowolo</h2>
                 <div className='flex flex-col gap-y-5 text-lg'>
                     <p>
