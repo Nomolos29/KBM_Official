@@ -43,11 +43,11 @@ const Footer = () => {
           url: "",
         },
         {
-          name: "Term of Use",
+          name: "Term of use",
           url: "",
         },
         {
-          name: "Contact",
+          name: "Contact us",
           url: "/contact_us",
         },
       ],
@@ -56,8 +56,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-black w-full">
-      <main className="max-w-[1440px] w-full mx-auto margin-auto py-10 md:py-20 md:pt-2 pl-5 flex justify-between items-center text-white">
-        <section className="flex flex-col w-full md:w-[50%] md:flex-row justify-between md:items-center gap-10 md:gap-x-20">
+      <main className="max-w-[1440px] w-full mx-auto margin-auto py-10 md:py-0 pt-8 md:pt-0 pl-5 flex justify-between items-center text-white">
+        <section className="flex flex-col w-full md:w-[55%] md:flex-row justify-between md:items-center gap-10 md:gap-x-20">
           <Link href="/" className="w-[50%] md:w-[40%]">
             <Image
               src={logo}
@@ -68,16 +68,16 @@ const Footer = () => {
             />
           </Link>
 
-          <div className="flex flex-col md:flex-row w-full pt-5 md:pt-0 gap-7 md:gap-16">
+          <div className="flex flex-col md:flex-row w-full gap-7 md:gap-10">
             {navMenu.map((Category, index) => (
-              <div key={index}>
+              <div key={index} className="flex flex-col gap-y-3">
                 <h4 className="font-semibold text-xl md:text-2xl pb-2">{Category.name}</h4>
                 <div className="flex flex-col gap-y-3 w-full">
                   {Category.menu.map((nav, index) => (
                     <Link
                       key={index}
                       href={nav.url}
-                      className="text-lg md:text-xl cursor-pointer text-[#d2d2d2]"
+                      className="text-lg md:text-md cursor-pointer text-[#d2d2d2]"
                     >
                       {nav.name}
                     </Link>
@@ -91,8 +91,8 @@ const Footer = () => {
           <Image
             src={footerBg}
             alt="Footer Background Image"
-            width={0}
-            height={0}
+            width={600}
+            height={500}
             className=""
           />
         </section>
