@@ -66,7 +66,7 @@ export const team = [
     role: "Project Manager",
   },
   {
-    image: "",
+    image: "/images/team/ernest.png",
     name: "Ernest Efe Osazuwa",
     socials: [
       {
@@ -88,7 +88,7 @@ export const team = [
     role: "Project Manager",
   },
   {
-    image: "",
+    image: "/images/team/Oshioriamen.png",
     name: "Oshioriamen G. Agbomekhe",
     socials: [
       {
@@ -110,7 +110,7 @@ export const team = [
     role: "Project Manager",
   },
   {
-    image: "",
+    image: "/images/team/Amarachi.png",
     name: "Amarachi Ogbu",
     socials: [
       {
@@ -154,7 +154,7 @@ export const team = [
     role: "Project Manager",
   },
   {
-    image: "",
+    image: "/images/team/Precious.png",
     name: "Precious Adegbite",
     socials: [
       {
@@ -220,7 +220,7 @@ export const team = [
     role: "Project Manager",
   },
   {
-    image: "",
+    image: "/images/team/Bello.png",
     name: "Bello Iteoluwakisi",
     socials: [
       {

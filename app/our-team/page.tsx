@@ -4,7 +4,7 @@ import React from 'react'
 
 const OurTeam = () => {
   return (
-    <main className='w-full flex flex-col justify-center items-center'>
+    <main className='w-full flex flex-col justify-center items-center overflow-x-hidden'>
         <HeroSection 
           title='Meet Our Team' 
           description='Behind every milestone at KBM is a team of passionate innovators, educators, and problem-solvers' 
