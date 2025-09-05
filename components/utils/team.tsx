@@ -22,246 +22,246 @@ export interface CardProps {
 
 export const team = [
   {
-    image: "",
+    image: "/images/team/Ayomide1.png",
     name: "Ayomide Arowolo-Ayodeji",
     socials: [
       {
         id: "linkedin",
         icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
+        link: "https://www.linkedin.com/in/ayomidearowoloayodeji/",
       },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
+      // {
+      //   id: "facebook",
+      //   icon: FaFacebookF,
+      //   link: "https://www.facebook.com/ayomide",
+      // },
+      // {
+      //   id: "twitter",
+      //   icon: FaXTwitter,
+      //   link: "https://twitter.com/ayomide",
+      // },
     ],
-    role: "Project Manager",
+    role: "CEO/Founder",
   },
   {
-    image: "",
-    name: "Osazee Oghagbon",
+    image: "/images/team/Osazee.png",
+    name: "  Osazee Oghagbon ",
     socials: [
       {
         id: "linkedin",
         icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
+        link: "https://www.linkedin.com/in/osazee-oghagbon/",
       },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
+      // {
+      //   id: "facebook",
+      //   icon: FaFacebookF,
+      //   link: "https://www.facebook.com/ayomide",
+      // },
+      // {
+      //   id: "twitter",
+      //   icon: FaXTwitter,
+      //   link: "https://twitter.com/ayomide",
+      // },
     ],
-    role: "Project Manager",
+    role: "Lead Educator, Blockchain Development",
   },
   {
-    image: "/images/team/ernest.png",
+    image: "/images/team/Efe.jpg",
     name: "Ernest Efe Osazuwa",
     socials: [
       {
         id: "linkedin",
         icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
+        link: "https://www.linkedin.com/in/ernest-osazuwa-8a79a4260/",
       },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
+      // {
+      //   id: "facebook",
+      //   icon: FaFacebookF,
+      //   link: "https://www.facebook.com/ayomide",
+      // },
+      // {
+      //   id: "twitter",
+      //   icon: FaXTwitter,
+      //   link: "https://twitter.com/ayomide",
+      // },
     ],
-    role: "Project Manager",
+    role: "Lead, Educator, Web2 Development",
   },
   {
-    image: "/images/team/Oshioriamen.png",
+    image: "/images/team/Oshioriamen.jpg",
     name: "Oshioriamen G. Agbomekhe",
     socials: [
       {
         id: "linkedin",
         icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
+        link: "https://www.linkedin.com/in/godsgiftagbomekhe/",
       },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
+      // {
+      //   id: "facebook",
+      //   icon: FaFacebookF,
+      //   link: "https://www.facebook.com/ayomide",
+      // },
+      // {
+      //   id: "twitter",
+      //   icon: FaXTwitter,
+      //   link: "https://twitter.com/ayomide",
+      // },
     ],
-    role: "Project Manager",
+    role: "Head of Operations",
   },
   {
-    image: "/images/team/Amarachi.png",
+    image: "/images/team/Amarachi.jpg",
     name: "Amarachi Ogbu",
     socials: [
       {
         id: "linkedin",
         icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
+        link: "https://www.linkedin.com/in/amarachiogbu/",
       },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
+      // {
+      //   id: "facebook",
+      //   icon: FaFacebookF,
+      //   link: "https://www.facebook.com/ayomide",
+      // },
+      // {
+      //   id: "twitter",
+      //   icon: FaXTwitter,
+      //   link: "https://twitter.com/ayomide",
+      // },
     ],
-    role: "Project Manager",
+    role: "Programs & Operations Officer",
   },
   {
-    image: "",
-    name: "Mariam Salami",
+    image: "/images/team/Donald.png",
+    name: "Donald Nwokoro",
     socials: [
       {
         id: "linkedin",
         icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
+        link: "https://www.linkedin.com/in/donald-nwokoro/",
       },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
+      // {
+      //   id: "facebook",
+      //   icon: FaFacebookF,
+      //   link: "https://www.facebook.com/ayomide",
+      // },
+      // {
+      //   id: "twitter",
+      //   icon: FaXTwitter,
+      //   link: "https://twitter.com/ayomide",
+      // },
     ],
-    role: "Project Manager",
+    role: "AI Engineer",
   },
   {
-    image: "/images/team/Precious.png",
+    image: "/images/team/Precious.jpg",
     name: "Precious Adegbite",
     socials: [
       {
         id: "linkedin",
         icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
+        link: "https://www.linkedin.com/in/precious-adegbite-547b1523b/",
       },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
+      // {
+      //   id: "facebook",
+      //   icon: FaFacebookF,
+      //   link: "https://www.facebook.com/ayomide",
+      // },
+      // {
+      //   id: "twitter",
+      //   icon: FaXTwitter,
+      //   link: "https://twitter.com/ayomide",
+      // },
     ],
-    role: "Project Manager",
+    role: "Product Designer",
   },
+  // {
+  //   image: "",
+  //   name: "Emmanuel Agbomekhe",
+  //   socials: [
+  //     {
+  //       id: "linkedin",
+  //       icon: FaLinkedinIn,
+  //       link: "#",
+  //     },
+  //     {
+  //       id: "facebook",
+  //       icon: FaFacebookF,
+  //       link: "#",
+  //     },
+  //     {
+  //       id: "twitter",
+  //       icon: FaXTwitter,
+  //       link: "#",
+  //     },
+  //   ],
+  //   role: "Graphics Designer",
+  // },
   {
-    image: "",
-    name: "Carl Aaron Lewis",
-    socials: [
-      {
-        id: "linkedin",
-        icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
-      },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
-    ],
-    role: "Project Manager",
-  },
-  {
-    image: "",
+    image: "/images/team/Solomon.jpg",
     name: "Solomon Sunday",
     socials: [
       {
         id: "linkedin",
         icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
+        link: "https://www.linkedin.com/in/solomon-sunday-0a0a26361/",
       },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
+      // {
+      //   id: "facebook",
+      //   icon: FaFacebookF,
+      //   link: "https://www.facebook.com/ayomide",
+      // },
+      // {
+      //   id: "twitter",
+      //   icon: FaXTwitter,
+      //   link: "https://twitter.com/ayomide",
+      // },
     ],
-    role: "Project Manager",
+    role: "Frontend Developer",
   },
   {
-    image: "/images/team/Bello.png",
+    image: "/images/team/Bello.jpg",
     name: "Bello Iteoluwakisi",
     socials: [
       {
         id: "linkedin",
         icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
+        link: "https://www.linkedin.com/in/iteoluwakisi-bello/",
       },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
+      // {
+      //   id: "facebook",
+      //   icon: FaFacebookF,
+      //   link: "https://www.facebook.com/ayomide",
+      // },
+      // {
+      //   id: "twitter",
+      //   icon: FaXTwitter,
+      //   link: "https://twitter.com/ayomide",
+      // },
     ],
-    role: "Project Manager",
+    role: "Blockchain Developer",
   },
   {
-    image: "",
-    name: "Happiness Idowu",
+    image: "/images/team/Ayomide.png",
+    name: "Olubaju Ayodeji",
     socials: [
       {
         id: "linkedin",
         icon: FaLinkedinIn,
-        link: "https://www.linkedin.com/in/ayomide",
+        link: "https://www.linkedin.com/in/olubaju-ayodeji-642988282/",
       },
-      {
-        id: "facebook",
-        icon: FaFacebookF,
-        link: "https://www.facebook.com/ayomide",
-      },
-      {
-        id: "twitter",
-        icon: FaXTwitter,
-        link: "https://twitter.com/ayomide",
-      },
+      // {
+      //   id: "facebook",
+      //   icon: FaFacebookF,
+      //   link: "https://www.facebook.com/ayomide",
+      // },
+      // {
+      //   id: "twitter",
+      //   icon: FaXTwitter,
+      //   link: "https://twitter.com/ayomide",
+      // },
     ],
-    role: "Project Manager",
+    role: "Social Media Manager ",
   },
 ];
 export const keyAchievements = [
