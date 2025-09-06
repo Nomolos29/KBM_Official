@@ -78,20 +78,20 @@ const ContactUs = () => {
         backgroundImage="bg-[url(/our-projects/tech-club-cohort.png)] bg-cover bg-center text-white bg-[#302204ae] bg-blend-darken"
       />
 
-      <main className="flex flex-col md:flex-row max-w-[1440px] gap-y-20 md:gap-0 pb-20 pt-10 md:py-20 w-full justify-between px-3 md:px-10">
-        <section className="flex flex-col items-center md:items-start gap-y-16 w-full md:w-2/5">
+      <main className="flex flex-col md:flex-row max-w-[1440px] gap-y-20 md:gap-0 pb-20 pt-10 md:py-20 w-full justify-between px-3 md:px-16">
+        <section className="flex flex-col gap-y-10 md:gap-y-16 w-full md:w-[55%]">
           <h1 className="font-semibold text-5xl leading-none">Contact Us</h1>
 
-          <div className="flex flex-col  items-center md:items-start gap-16 w-[75%]">
+          <div className="flex flex-col gap-10 md:gap-12 w-full px-5 md:px-0 md:w-[90%]">
             {contactInfo.map((contact, index) => (
               <div
                 key={index}
-                className="flex text-center md:text-left justify-center md:gap-3 "
+                className="flex text-left gap-3 "
               >
                 <span className="text-2xl">{contact.icon}</span>
                 <div className="flex flex-col gap-y-2">
-                  <h4 className="font-medium text-xl">{contact.title}</h4>
-                  <p className="text-sm text-[#777777]">
+                  <h4 className="font-medium text-2xl">{contact.title}</h4>
+                  <p className="text-lg md:text-xl text-[#777777]">
                     {contact.description}
                   </p>
                 </div>
@@ -100,11 +100,11 @@ const ContactUs = () => {
             <CommunityDropdown />
           </div>
 
-          <div className="flex pl-5">
+          <div className="flex pl-5 gap-x-3">
             {socialLinks.map((social, index) => (
               <div
                 key={index}
-                className="text-2xl w-10 h-10 bg-[#FBDEB5] flex justify-center items-center rounded-full font-medium"
+                className="text-2xl w-14 h-14 bg-[#FBDEB5] flex justify-center items-center rounded-full font-medium"
               >
                 {social.icon}
               </div>
@@ -112,8 +112,8 @@ const ContactUs = () => {
           </div>
         </section>
 
-        <section className="w-full flex flex-col px-2 items-end">
-          <div className="w-full flex md:w-3/5 flex-col gap-y-7 relative">
+        <section className="w-full flex flex-col px-2 items-center">
+          <div className="w-full flex md:w-[65%] flex-col gap-y-7 relative">
             <h1 className="font-semibold text-4xl">Get in touch</h1>
 
             <div className="w-full flex flex-col gap-y-20 blur-[80px] absolute max-w-[1250px] bottom-0 right-[-70px] z-0">
@@ -124,7 +124,7 @@ const ContactUs = () => {
               <span className="h-[80px] bg-[#80c913b0] rounded-full z-10 rotate-12"></span>
             </div>
 
-            <form className="w-full md:w-[380px] lg:w-[480px] xl:w-[540px] p-8 bg-white rounded-lg flex flex-col gap-y-5 z-10">
+            <form className="w-full md:w-[380px] xl:w-full p-8 bg-white rounded-lg flex flex-col gap-y-5 z-10">
               <span className="w-full flex flex-col gap-2">
                 <label htmlFor="userName" className="font-medium text-lg">
                   Enter you name
