@@ -4,7 +4,8 @@ import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import teamImage from "@/public/team-gallery/teamPhoto1.png"
-
+import teamImage1 from "@/public/team-gallery/image1.png"
+import teamImage2 from "@/public/team-gallery/image.png"
 const PastEngagement = () => {
 
     const [activeIndex, setActiveIndex] = useState(0);
@@ -22,6 +23,7 @@ const PastEngagement = () => {
         prevIndex === 0 ? team.length - visibleCards : prevIndex - 1
         );
     };
+
 
     useEffect(() => {
         if (!isPaused) {
@@ -44,7 +46,7 @@ const PastEngagement = () => {
 
 
     const team = [
-      teamImage, teamImage, teamImage, teamImage, teamImage, teamImage, teamImage, teamImage, teamImage, teamImage, teamImage
+      teamImage, teamImage1, teamImage2, teamImage, teamImage1, teamImage2, teamImage, teamImage1, teamImage2, teamImage, teamImage1, teamImage2
     ]
 
   return (
