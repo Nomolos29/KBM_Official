@@ -76,7 +76,7 @@ export default function Home() {
                   self-taught developers, and career switchers—into
                   industry-ready professionals.
                 </p>
-                <p className="flex gap-10 items-start">
+                <div className="flex gap-10 items-start">
                   <span className="pt-2">
                     <svg
                       width="20"
@@ -92,14 +92,14 @@ export default function Home() {
                       />
                     </svg>
                   </span>
-                  <span>
+                  <p>
                     Our courses, ranging from 1 to 6 months, are tailored to
                     provide a strong foundation in software development, other
                     emerging technologies, and leadership through hands-on
                     projects, live coding sessions, and expert-led workshops.
-                  </span>
-                </p>
-                <p className="flex gap-10 items-start">
+                  </p>
+                </div>
+                <div className="flex gap-10 items-start">
                   <span className="pt-2">
                     <svg
                       width="20"
@@ -115,12 +115,12 @@ export default function Home() {
                       />
                     </svg>
                   </span>
-                  <span>
+                  <p>
                     We go beyond technical training by offering structured
                     mentorship, real-world industry challengelg:p-7 s, and direct
                     hiring partnerships...
-                  </span>
-                </p>
+                  </p>
+                </div>
               </div>
             }
             imgSectionTitle="What We Do"
@@ -273,7 +273,7 @@ export default function Home() {
         </div>
 
         <Link
-            href="/" // Redirect to the relevant page
+            href="/our_projects"
             className="px-4 mt-10 md:px-8 py-2 bg-gradient-to-r from-[#F8B51C] to-[#FEE539] text-black text-md md:text-lg font-semibold rounded-lg hover:bg-[#e69c00]"
           >
             Read more...

@@ -47,9 +47,9 @@ const sectionData: ImageBoxProps[] = [
 
 const OurProjects = () => {
   return (
-    <main className='w-full flex flex-col justify-center items-center'>
-        <HeroSection 
-            title='Our Projects' 
+    <main className='w-full flex flex-col justify-center items-center pb-20'>
+        <HeroSection
+            title='Our Projects'
             description='Turning ideas into impact. From tech education in schools to Web3 solutions and hands-on learning experiences, explore how KBM is driving innovation across Nigeria and beyond.'
             backgroundImage="bg-[url(/our-projects/tech-club-cohort.png)] bg-cover bg-center text-white bg-[#30220499] bg-blend-darken"
         />
@@ -57,10 +57,11 @@ const OurProjects = () => {
 
         <div className='flex flex-col px-5'>
           {sectionData.map((section, index) => (
-            <ImageBox key={index} imgSectionText={section.imgSectionText} imgSectionTitle={section.imgSectionTitle} titleBorder imageSrc={section.imageSrc} reverse={index % 2 === 1} gap textSize='lg' imageSize='lg' imageBorder={index != 0} alignment='top' />
+            <ImageBox key={index} imgSectionText={section.imgSectionText} imgSectionTitle={section.imgSectionTitle} titleBorder imageSrc={section.imageSrc} reverse={index % 2 === 1} gap textSize='lg' imageSize='lg' imageBorder={index != 0} alignment='center' />
           ))}
         </div>
     </main>
+    // 
   )
 }
 

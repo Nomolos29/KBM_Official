@@ -11,7 +11,7 @@ export interface ImageBoxProps extends ListItemProps, ButtonProps {
   titleSize?: "sm" | "lg" | "xl";
   imageSize?: "sm" | "lg" | "xl";
   light?: boolean;
-  alignment?: "bottom" | "top";
+  alignment?: "bottom" | "top" | "center";
   imageBorder?: boolean;
   button?: boolean;
   titleBorder?: boolean;
@@ -48,7 +48,8 @@ const ImageBox: React.FC<ImageBoxProps> = ({
             ? "lg:items-end"
             : alignment == "top"
             ? "lg:items-start"
-            : "lg:items-center"
+            : alignment == "center"
+            && "lg:items-center"
         } flex justify-between gap-x-10 flex-col lg:flex-row ${
           reverse && "lg:flex-row-reverse md:text-right"
         }`}
@@ -145,7 +146,7 @@ const ImageBox: React.FC<ImageBoxProps> = ({
                 height={1000}
                 src={imageSrc}
                 alt="Section image"
-                className={imageBorder ? "absolute w-full h-fit md:h-full bg-cover top-3 left-3" : ""}
+                className={imageBorder ? "absolute w-full h-fit md:h-full bg-cover top-3 left-3 object-cover" : ""}
               />
             </div>
           )}
