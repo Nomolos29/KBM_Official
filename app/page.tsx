@@ -147,7 +147,7 @@ export default function Home() {
             developers through...
           </p>
           <Link
-            href="/" // Redirect to the relevant page
+            href="/about_us" // Redirect to the relevant page
             className="px-4 md:px-8 py-2 bg-gradient-to-r from-[#F8B51C] to-[#FEE539] text-black text-md md:text-lg font-semibold rounded-lg hover:bg-[#e69c00]"
           >
             Read more...
