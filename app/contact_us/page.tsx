@@ -36,9 +36,9 @@ const ContactUs = () => {
     },
     {
       icon: <TfiLocationPin />,
-      title: "Gmail Address",
-      description: "knowtheblocksmaven@gmail.com",
-      link: "",
+      title: "Email Address",
+      description: "operations@knowtheblocks.org",
+      link: "mailto:operations@knowtheblocks.org",
     },
     {
       icon: <TfiLocationPin />,

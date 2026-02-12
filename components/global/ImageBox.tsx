@@ -80,13 +80,13 @@ const ImageBox: React.FC<ImageBoxProps> = ({
               </h3>
             </section>
 
-            <p
+            <div
               className={`text-lg w-full md:text-xl md:leading-relaxed ${
                 light ? "text-white" : "text-[#212121]"
               }`}
             >
               {imgSectionText}
-            </p>
+            </div>
 
             <div className="pt-5">
               {button && (
