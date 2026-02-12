@@ -17,6 +17,13 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Know the Blocks Maven",
   description: "Empowering the next generation of developers through cutting-edge training, hands-on experience, and practical exposure to real-life projects",
+  icons: {
+    icon: [
+      { url: "/icon.ico" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.svg",
+  },
   keywords: [
     "KBM", "DAOit", "blocks", "Know the blocks maven", "Secondary schools", "tech career training", "emerging technologies course", "learn Web3", "blockchain education", "AI training program", "KBM tech bootcamp", "coding bootcamp Africa", "beginner software development", "career switch to tech", "practical tech training", "hands-on coding experience", "AI and Web3 education", "tech mentorship program", "real-world tech projects", "developer job placement", "inclusive tech education", "tech skills for beginners", "live coding workshops", "developer career launch", "industry-ready tech talent", "tech literacy", "Web3", "learn blocks", "blockchain basics site", "understand crypto for beginners", "know blocks", "knowtheblock", "know blocks.org"
 
