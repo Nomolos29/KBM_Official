@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "Empowering the next generation of developers through cutting-edge training, hands-on experience, and practical exposure to real-life projects",
   icons: {
     icon: [
-      { url: "/favicon.svg" },
+      { url: "/favicon.ico" },
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: "/apple-touch-icon.svg",
